@@ -8,8 +8,13 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface OCAppDelegate : NSObject <NSApplicationDelegate>
+@interface OCAppDelegate : NSObject <NSApplicationDelegate> {
+    NSWindowController *_preferencesWindowController;
+}
 
 @property (assign) IBOutlet NSWindow *window;
+@property (nonatomic, readonly) NSWindowController *preferencesWindowController;
+
+- (IBAction)openPreferences:(id)sender;
 
 @end

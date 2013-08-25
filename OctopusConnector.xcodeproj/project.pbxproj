@@ -13,6 +13,9 @@
 		C9E772CB17CA909300E94EBC /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = C9E772C917CA909300E94EBC /* Credits.rtf */; };
 		C9E772CE17CA909300E94EBC /* OCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E772CD17CA909300E94EBC /* OCAppDelegate.m */; };
 		C9E772D117CA909300E94EBC /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9E772CF17CA909300E94EBC /* MainMenu.xib */; };
+		C9E772E417CA978200E94EBC /* MASPreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E772DB17CA90F900E94EBC /* MASPreferencesWindowController.m */; };
+		C9E772F017CA99ED00E94EBC /* OCRepositorySelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E772EE17CA99ED00E94EBC /* OCRepositorySelectionViewController.m */; };
+		C9E772F117CA99ED00E94EBC /* OCRepositorySelectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9E772EF17CA99ED00E94EBC /* OCRepositorySelectionView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +32,14 @@
 		C9E772CC17CA909300E94EBC /* OCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCAppDelegate.h; sourceTree = "<group>"; };
 		C9E772CD17CA909300E94EBC /* OCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCAppDelegate.m; sourceTree = "<group>"; };
 		C9E772D017CA909300E94EBC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		C9E772D817CA90F900E94EBC /* MASPreferencesWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MASPreferencesWindow.xib; sourceTree = "<group>"; };
+		C9E772D917CA90F900E94EBC /* MASPreferencesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MASPreferencesViewController.h; sourceTree = "<group>"; };
+		C9E772DA17CA90F900E94EBC /* MASPreferencesWindowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MASPreferencesWindowController.h; sourceTree = "<group>"; };
+		C9E772DB17CA90F900E94EBC /* MASPreferencesWindowController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MASPreferencesWindowController.m; sourceTree = "<group>"; };
+		C9E772DC17CA96E700E94EBC /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		C9E772ED17CA99ED00E94EBC /* OCRepositorySelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCRepositorySelectionViewController.h; sourceTree = "<group>"; };
+		C9E772EE17CA99ED00E94EBC /* OCRepositorySelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCRepositorySelectionViewController.m; sourceTree = "<group>"; };
+		C9E772EF17CA99ED00E94EBC /* OCRepositorySelectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OCRepositorySelectionView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +57,7 @@
 		C9E772AE17CA909300E94EBC = {
 			isa = PBXGroup;
 			children = (
+				C9E772DC17CA96E700E94EBC /* AVFoundation.framework */,
 				C9E772C017CA909300E94EBC /* OctopusConnector */,
 				C9E772B917CA909300E94EBC /* Frameworks */,
 				C9E772B817CA909300E94EBC /* Products */,
@@ -82,6 +94,8 @@
 		C9E772C017CA909300E94EBC /* OctopusConnector */ = {
 			isa = PBXGroup;
 			children = (
+				C9E772E517CA97F800E94EBC /* Preferences */,
+				C9E772D717CA90EF00E94EBC /* MASPreferences */,
 				C9E772CC17CA909300E94EBC /* OCAppDelegate.h */,
 				C9E772CD17CA909300E94EBC /* OCAppDelegate.m */,
 				C9E772CF17CA909300E94EBC /* MainMenu.xib */,
@@ -100,6 +114,27 @@
 				C9E772C917CA909300E94EBC /* Credits.rtf */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C9E772D717CA90EF00E94EBC /* MASPreferences */ = {
+			isa = PBXGroup;
+			children = (
+				C9E772D817CA90F900E94EBC /* MASPreferencesWindow.xib */,
+				C9E772D917CA90F900E94EBC /* MASPreferencesViewController.h */,
+				C9E772DA17CA90F900E94EBC /* MASPreferencesWindowController.h */,
+				C9E772DB17CA90F900E94EBC /* MASPreferencesWindowController.m */,
+			);
+			name = MASPreferences;
+			sourceTree = "<group>";
+		};
+		C9E772E517CA97F800E94EBC /* Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				C9E772ED17CA99ED00E94EBC /* OCRepositorySelectionViewController.h */,
+				C9E772EE17CA99ED00E94EBC /* OCRepositorySelectionViewController.m */,
+				C9E772EF17CA99ED00E94EBC /* OCRepositorySelectionView.xib */,
+			);
+			name = Preferences;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,6 +192,7 @@
 				C9E772C517CA909300E94EBC /* InfoPlist.strings in Resources */,
 				C9E772CB17CA909300E94EBC /* Credits.rtf in Resources */,
 				C9E772D117CA909300E94EBC /* MainMenu.xib in Resources */,
+				C9E772F117CA99ED00E94EBC /* OCRepositorySelectionView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,8 +203,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9E772E417CA978200E94EBC /* MASPreferencesWindowController.m in Sources */,
 				C9E772C717CA909300E94EBC /* main.m in Sources */,
 				C9E772CE17CA909300E94EBC /* OCAppDelegate.m in Sources */,
+				C9E772F017CA99ED00E94EBC /* OCRepositorySelectionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,10 +302,12 @@
 		C9E772D517CA909300E94EBC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OctopusConnector/OctopusConnector-Prefix.pch";
 				INFOPLIST_FILE = "OctopusConnector/OctopusConnector-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -276,10 +316,12 @@
 		C9E772D617CA909300E94EBC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OctopusConnector/OctopusConnector-Prefix.pch";
 				INFOPLIST_FILE = "OctopusConnector/OctopusConnector-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
