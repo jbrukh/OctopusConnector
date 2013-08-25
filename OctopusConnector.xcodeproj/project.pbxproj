@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C9526B5117CAAE8D00C854F3 /* MASPreferencesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9526B4C17CAAE8D00C854F3 /* MASPreferencesWindow.xib */; };
+		C9526B5217CAAE8D00C854F3 /* MASPreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9526B4E17CAAE8D00C854F3 /* MASPreferencesWindowController.m */; };
 		C9E772BB17CA909300E94EBC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9E772BA17CA909300E94EBC /* Cocoa.framework */; };
 		C9E772C517CA909300E94EBC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9E772C317CA909300E94EBC /* InfoPlist.strings */; };
 		C9E772C717CA909300E94EBC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E772C617CA909300E94EBC /* main.m */; };
 		C9E772CB17CA909300E94EBC /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = C9E772C917CA909300E94EBC /* Credits.rtf */; };
 		C9E772CE17CA909300E94EBC /* OCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E772CD17CA909300E94EBC /* OCAppDelegate.m */; };
 		C9E772D117CA909300E94EBC /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9E772CF17CA909300E94EBC /* MainMenu.xib */; };
-		C9E772E417CA978200E94EBC /* MASPreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E772DB17CA90F900E94EBC /* MASPreferencesWindowController.m */; };
 		C9E772F017CA99ED00E94EBC /* OCRepositorySelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E772EE17CA99ED00E94EBC /* OCRepositorySelectionViewController.m */; };
 		C9E772F117CA99ED00E94EBC /* OCRepositorySelectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9E772EF17CA99ED00E94EBC /* OCRepositorySelectionView.xib */; };
 		C9E772F517CA9D0100E94EBC /* icon_down.png in Resources */ = {isa = PBXBuildFile; fileRef = C9E772F217CA9D0100E94EBC /* icon_down.png */; };
@@ -24,6 +25,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C9526B4B17CAAE8D00C854F3 /* MASPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MASPreferencesViewController.h; path = MASPreferences/MASPreferencesViewController.h; sourceTree = "<group>"; };
+		C9526B4C17CAAE8D00C854F3 /* MASPreferencesWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MASPreferencesWindow.xib; path = MASPreferences/MASPreferencesWindow.xib; sourceTree = "<group>"; };
+		C9526B4D17CAAE8D00C854F3 /* MASPreferencesWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MASPreferencesWindowController.h; path = MASPreferences/MASPreferencesWindowController.h; sourceTree = "<group>"; };
+		C9526B4E17CAAE8D00C854F3 /* MASPreferencesWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MASPreferencesWindowController.m; path = MASPreferences/MASPreferencesWindowController.m; sourceTree = "<group>"; };
 		C9E772B717CA909300E94EBC /* OctopusConnector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OctopusConnector.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9E772BA17CA909300E94EBC /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		C9E772BD17CA909300E94EBC /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -37,10 +42,6 @@
 		C9E772CC17CA909300E94EBC /* OCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCAppDelegate.h; sourceTree = "<group>"; };
 		C9E772CD17CA909300E94EBC /* OCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCAppDelegate.m; sourceTree = "<group>"; };
 		C9E772D017CA909300E94EBC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		C9E772D817CA90F900E94EBC /* MASPreferencesWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MASPreferencesWindow.xib; sourceTree = "<group>"; };
-		C9E772D917CA90F900E94EBC /* MASPreferencesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MASPreferencesViewController.h; sourceTree = "<group>"; };
-		C9E772DA17CA90F900E94EBC /* MASPreferencesWindowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MASPreferencesWindowController.h; sourceTree = "<group>"; };
-		C9E772DB17CA90F900E94EBC /* MASPreferencesWindowController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MASPreferencesWindowController.m; sourceTree = "<group>"; };
 		C9E772DC17CA96E700E94EBC /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		C9E772ED17CA99ED00E94EBC /* OCRepositorySelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCRepositorySelectionViewController.h; sourceTree = "<group>"; };
 		C9E772EE17CA99ED00E94EBC /* OCRepositorySelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCRepositorySelectionViewController.m; sourceTree = "<group>"; };
@@ -65,6 +66,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C9526B4817CAAE7300C854F3 /* MASPreferences */ = {
+			isa = PBXGroup;
+			children = (
+				C9526B4B17CAAE8D00C854F3 /* MASPreferencesViewController.h */,
+				C9526B4C17CAAE8D00C854F3 /* MASPreferencesWindow.xib */,
+				C9526B4D17CAAE8D00C854F3 /* MASPreferencesWindowController.h */,
+				C9526B4E17CAAE8D00C854F3 /* MASPreferencesWindowController.m */,
+			);
+			name = MASPreferences;
+			sourceTree = "<group>";
+		};
 		C9E772AE17CA909300E94EBC = {
 			isa = PBXGroup;
 			children = (
@@ -105,8 +117,8 @@
 		C9E772C017CA909300E94EBC /* OctopusConnector */ = {
 			isa = PBXGroup;
 			children = (
+				C9526B4817CAAE7300C854F3 /* MASPreferences */,
 				C9E772E517CA97F800E94EBC /* Preferences */,
-				C9E772D717CA90EF00E94EBC /* MASPreferences */,
 				C9E772CC17CA909300E94EBC /* OCAppDelegate.h */,
 				C9E772CD17CA909300E94EBC /* OCAppDelegate.m */,
 				C9E772CF17CA909300E94EBC /* MainMenu.xib */,
@@ -127,17 +139,6 @@
 				C9E772C917CA909300E94EBC /* Credits.rtf */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		C9E772D717CA90EF00E94EBC /* MASPreferences */ = {
-			isa = PBXGroup;
-			children = (
-				C9E772D817CA90F900E94EBC /* MASPreferencesWindow.xib */,
-				C9E772D917CA90F900E94EBC /* MASPreferencesViewController.h */,
-				C9E772DA17CA90F900E94EBC /* MASPreferencesWindowController.h */,
-				C9E772DB17CA90F900E94EBC /* MASPreferencesWindowController.m */,
-			);
-			name = MASPreferences;
 			sourceTree = "<group>";
 		};
 		C9E772E517CA97F800E94EBC /* Preferences */ = {
@@ -230,6 +231,7 @@
 				C9E772F617CA9D0100E94EBC /* icon_up.png in Resources */,
 				C9E772F717CA9D0100E94EBC /* octopus.icns in Resources */,
 				C9E772FE17CAA05800E94EBC /* OCDeviceSelectionView.xib in Resources */,
+				C9526B5117CAAE8D00C854F3 /* MASPreferencesWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,11 +242,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9E772E417CA978200E94EBC /* MASPreferencesWindowController.m in Sources */,
 				C9E772C717CA909300E94EBC /* main.m in Sources */,
 				C9E772CE17CA909300E94EBC /* OCAppDelegate.m in Sources */,
 				C9E772F017CA99ED00E94EBC /* OCRepositorySelectionViewController.m in Sources */,
 				C9E772FD17CAA05800E94EBC /* OCDeviceSelectionViewController.m in Sources */,
+				C9526B5217CAAE8D00C854F3 /* MASPreferencesWindowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,7 +342,7 @@
 		C9E772D517CA909300E94EBC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OctopusConnector/OctopusConnector-Prefix.pch";
@@ -354,7 +356,7 @@
 		C9E772D617CA909300E94EBC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OctopusConnector/OctopusConnector-Prefix.pch";
@@ -384,6 +386,7 @@
 				C9E772D617CA909300E94EBC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

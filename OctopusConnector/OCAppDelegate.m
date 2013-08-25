@@ -41,7 +41,7 @@
 
 - (IBAction)openPreferences:(id)sender
 {
-    [self.preferencesWindowController showWindow:sender];
+    [self.preferencesWindowController showWindow:nil];
 }
 
 #pragma mark -
