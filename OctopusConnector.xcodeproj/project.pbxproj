@@ -16,6 +16,11 @@
 		C9E772E417CA978200E94EBC /* MASPreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E772DB17CA90F900E94EBC /* MASPreferencesWindowController.m */; };
 		C9E772F017CA99ED00E94EBC /* OCRepositorySelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E772EE17CA99ED00E94EBC /* OCRepositorySelectionViewController.m */; };
 		C9E772F117CA99ED00E94EBC /* OCRepositorySelectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9E772EF17CA99ED00E94EBC /* OCRepositorySelectionView.xib */; };
+		C9E772F517CA9D0100E94EBC /* icon_down.png in Resources */ = {isa = PBXBuildFile; fileRef = C9E772F217CA9D0100E94EBC /* icon_down.png */; };
+		C9E772F617CA9D0100E94EBC /* icon_up.png in Resources */ = {isa = PBXBuildFile; fileRef = C9E772F317CA9D0100E94EBC /* icon_up.png */; };
+		C9E772F717CA9D0100E94EBC /* octopus.icns in Resources */ = {isa = PBXBuildFile; fileRef = C9E772F417CA9D0100E94EBC /* octopus.icns */; };
+		C9E772FD17CAA05800E94EBC /* OCDeviceSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E772FB17CAA05800E94EBC /* OCDeviceSelectionViewController.m */; };
+		C9E772FE17CAA05800E94EBC /* OCDeviceSelectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9E772FC17CAA05800E94EBC /* OCDeviceSelectionView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +45,12 @@
 		C9E772ED17CA99ED00E94EBC /* OCRepositorySelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCRepositorySelectionViewController.h; sourceTree = "<group>"; };
 		C9E772EE17CA99ED00E94EBC /* OCRepositorySelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCRepositorySelectionViewController.m; sourceTree = "<group>"; };
 		C9E772EF17CA99ED00E94EBC /* OCRepositorySelectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OCRepositorySelectionView.xib; sourceTree = "<group>"; };
+		C9E772F217CA9D0100E94EBC /* icon_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_down.png; path = ../../../OctopusConnector/icon_down.png; sourceTree = "<group>"; };
+		C9E772F317CA9D0100E94EBC /* icon_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_up.png; path = ../../../OctopusConnector/icon_up.png; sourceTree = "<group>"; };
+		C9E772F417CA9D0100E94EBC /* octopus.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = octopus.icns; path = ../../../OctopusConnector/OctopusConnector/octopus.icns; sourceTree = "<group>"; };
+		C9E772FA17CAA05800E94EBC /* OCDeviceSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCDeviceSelectionViewController.h; sourceTree = "<group>"; };
+		C9E772FB17CAA05800E94EBC /* OCDeviceSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCDeviceSelectionViewController.m; sourceTree = "<group>"; };
+		C9E772FC17CAA05800E94EBC /* OCDeviceSelectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OCDeviceSelectionView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +118,8 @@
 		C9E772C117CA909300E94EBC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C9E772F917CA9D7100E94EBC /* Binaries */,
+				C9E772F817CA9D5D00E94EBC /* Images */,
 				C9E772C217CA909300E94EBC /* OctopusConnector-Info.plist */,
 				C9E772C317CA909300E94EBC /* InfoPlist.strings */,
 				C9E772C617CA909300E94EBC /* main.m */,
@@ -133,8 +146,28 @@
 				C9E772ED17CA99ED00E94EBC /* OCRepositorySelectionViewController.h */,
 				C9E772EE17CA99ED00E94EBC /* OCRepositorySelectionViewController.m */,
 				C9E772EF17CA99ED00E94EBC /* OCRepositorySelectionView.xib */,
+				C9E772FA17CAA05800E94EBC /* OCDeviceSelectionViewController.h */,
+				C9E772FB17CAA05800E94EBC /* OCDeviceSelectionViewController.m */,
+				C9E772FC17CAA05800E94EBC /* OCDeviceSelectionView.xib */,
 			);
 			name = Preferences;
+			sourceTree = "<group>";
+		};
+		C9E772F817CA9D5D00E94EBC /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				C9E772F217CA9D0100E94EBC /* icon_down.png */,
+				C9E772F317CA9D0100E94EBC /* icon_up.png */,
+				C9E772F417CA9D0100E94EBC /* octopus.icns */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		C9E772F917CA9D7100E94EBC /* Binaries */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Binaries;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +226,10 @@
 				C9E772CB17CA909300E94EBC /* Credits.rtf in Resources */,
 				C9E772D117CA909300E94EBC /* MainMenu.xib in Resources */,
 				C9E772F117CA99ED00E94EBC /* OCRepositorySelectionView.xib in Resources */,
+				C9E772F517CA9D0100E94EBC /* icon_down.png in Resources */,
+				C9E772F617CA9D0100E94EBC /* icon_up.png in Resources */,
+				C9E772F717CA9D0100E94EBC /* octopus.icns in Resources */,
+				C9E772FE17CAA05800E94EBC /* OCDeviceSelectionView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,6 +244,7 @@
 				C9E772C717CA909300E94EBC /* main.m in Sources */,
 				C9E772CE17CA909300E94EBC /* OCAppDelegate.m in Sources */,
 				C9E772F017CA99ED00E94EBC /* OCRepositorySelectionViewController.m in Sources */,
+				C9E772FD17CAA05800E94EBC /* OCDeviceSelectionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

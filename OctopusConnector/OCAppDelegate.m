@@ -9,6 +9,7 @@
 #import "OCAppDelegate.h"
 #import "MASPreferencesWindowController.h"
 #import "OCRepositorySelectionViewController.h"
+#import "OCDeviceSelectionViewController.h"
 
 @implementation OCAppDelegate
 
@@ -24,11 +25,12 @@
     if (_preferencesWindowController == nil)
     {
         // alloc the view controllers for preferences
+        NSViewController *deviceSelectionView = [[OCDeviceSelectionViewController alloc] init];
         NSViewController *repositorySelectionView = [[OCRepositorySelectionViewController alloc] init];
-        NSArray *controllers = [[NSArray alloc] initWithObjects:repositorySelectionView, nil];
+        NSArray *controllers = [[NSArray alloc] initWithObjects:deviceSelectionView, repositorySelectionView, nil];
         
         // create the preferences window controller
-        NSString *title = NSLocalizedString(@"Octopus Connector Preferences", @"Common title for Preferences window");
+        NSString *title = NSLocalizedString(@"Octopus Connector Preferences", @"Common title for preferences window");
         _preferencesWindowController = [[MASPreferencesWindowController alloc] initWithViewControllers:controllers title:title];
     }
     return _preferencesWindowController;
@@ -42,6 +44,19 @@
     [self.preferencesWindowController showWindow:sender];
 }
 
+#pragma mark -
+
+NSString *const kFocusedAdvancedControlIndex = @"FocusedAdvancedControlIndex";
+
+- (NSInteger)focusedAdvancedControlIndex
+{
+    return [[NSUserDefaults standardUserDefaults] integerForKey:kFocusedAdvancedControlIndex];
+}
+
+- (void)setFocusedAdvancedControlIndex:(NSInteger)focusedAdvancedControlIndex
+{
+    [[NSUserDefaults standardUserDefaults] setInteger:focusedAdvancedControlIndex forKey:kFocusedAdvancedControlIndex];
+}
 
 
 @end

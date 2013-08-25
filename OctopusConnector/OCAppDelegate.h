@@ -14,6 +14,7 @@
 
 @property (assign) IBOutlet NSWindow *window;
 @property (nonatomic, readonly) NSWindowController *preferencesWindowController;
+@property (nonatomic) NSInteger focusedAdvancedControlIndex;
 
 - (IBAction)openPreferences:(id)sender;
 

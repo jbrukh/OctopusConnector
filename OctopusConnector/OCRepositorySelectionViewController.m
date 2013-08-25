@@ -16,7 +16,9 @@
 
 - (id)init
 {
-    return [super initWithNibName:@"OCRepositorySelectionView" bundle:nil];
+    id viewController = [super initWithNibName:@"OCRepositorySelectionView" bundle:nil];
+    [viewController ensureRepoDir];
+    return viewController;
 }
 
 
@@ -25,7 +27,7 @@
 
 - (NSString *)identifier
 {
-    return @"GeneralPreferences";
+    return @"RepositoryPreferences";
 }
 
 - (NSImage *)toolbarItemImage
@@ -35,7 +37,16 @@
 
 - (NSString *)toolbarItemLabel
 {
-    return NSLocalizedString(@"General", @"Toolbar item name for the General preference pane");
+    return NSLocalizedString(@"Repository", @"Toolbar name for the repository preferences pane");
+}
+
+- (void)ensureRepoDir
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *repo = [defaults valueForKey:@"octopusRepo"];
+    if ([repo length] <= 0) {
+        [defaults setValue:@"poop" forKey:@"octopusRepo"];
+    }
 }
 
 
