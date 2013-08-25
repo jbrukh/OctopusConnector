@@ -1,0 +1,311 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C9E772BB17CA909300E94EBC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9E772BA17CA909300E94EBC /* Cocoa.framework */; };
+		C9E772C517CA909300E94EBC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9E772C317CA909300E94EBC /* InfoPlist.strings */; };
+		C9E772C717CA909300E94EBC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E772C617CA909300E94EBC /* main.m */; };
+		C9E772CB17CA909300E94EBC /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = C9E772C917CA909300E94EBC /* Credits.rtf */; };
+		C9E772CE17CA909300E94EBC /* OCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E772CD17CA909300E94EBC /* OCAppDelegate.m */; };
+		C9E772D117CA909300E94EBC /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9E772CF17CA909300E94EBC /* MainMenu.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C9E772B717CA909300E94EBC /* OctopusConnector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OctopusConnector.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9E772BA17CA909300E94EBC /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		C9E772BD17CA909300E94EBC /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		C9E772BE17CA909300E94EBC /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		C9E772BF17CA909300E94EBC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C9E772C217CA909300E94EBC /* OctopusConnector-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OctopusConnector-Info.plist"; sourceTree = "<group>"; };
+		C9E772C417CA909300E94EBC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C9E772C617CA909300E94EBC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C9E772C817CA909300E94EBC /* OctopusConnector-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OctopusConnector-Prefix.pch"; sourceTree = "<group>"; };
+		C9E772CA17CA909300E94EBC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		C9E772CC17CA909300E94EBC /* OCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCAppDelegate.h; sourceTree = "<group>"; };
+		C9E772CD17CA909300E94EBC /* OCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCAppDelegate.m; sourceTree = "<group>"; };
+		C9E772D017CA909300E94EBC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C9E772B417CA909300E94EBC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9E772BB17CA909300E94EBC /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C9E772AE17CA909300E94EBC = {
+			isa = PBXGroup;
+			children = (
+				C9E772C017CA909300E94EBC /* OctopusConnector */,
+				C9E772B917CA909300E94EBC /* Frameworks */,
+				C9E772B817CA909300E94EBC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C9E772B817CA909300E94EBC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C9E772B717CA909300E94EBC /* OctopusConnector.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C9E772B917CA909300E94EBC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C9E772BA17CA909300E94EBC /* Cocoa.framework */,
+				C9E772BC17CA909300E94EBC /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C9E772BC17CA909300E94EBC /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C9E772BD17CA909300E94EBC /* AppKit.framework */,
+				C9E772BE17CA909300E94EBC /* CoreData.framework */,
+				C9E772BF17CA909300E94EBC /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		C9E772C017CA909300E94EBC /* OctopusConnector */ = {
+			isa = PBXGroup;
+			children = (
+				C9E772CC17CA909300E94EBC /* OCAppDelegate.h */,
+				C9E772CD17CA909300E94EBC /* OCAppDelegate.m */,
+				C9E772CF17CA909300E94EBC /* MainMenu.xib */,
+				C9E772C117CA909300E94EBC /* Supporting Files */,
+			);
+			path = OctopusConnector;
+			sourceTree = "<group>";
+		};
+		C9E772C117CA909300E94EBC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C9E772C217CA909300E94EBC /* OctopusConnector-Info.plist */,
+				C9E772C317CA909300E94EBC /* InfoPlist.strings */,
+				C9E772C617CA909300E94EBC /* main.m */,
+				C9E772C817CA909300E94EBC /* OctopusConnector-Prefix.pch */,
+				C9E772C917CA909300E94EBC /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C9E772B617CA909300E94EBC /* OctopusConnector */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9E772D417CA909300E94EBC /* Build configuration list for PBXNativeTarget "OctopusConnector" */;
+			buildPhases = (
+				C9E772B317CA909300E94EBC /* Sources */,
+				C9E772B417CA909300E94EBC /* Frameworks */,
+				C9E772B517CA909300E94EBC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OctopusConnector;
+			productName = OctopusConnector;
+			productReference = C9E772B717CA909300E94EBC /* OctopusConnector.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C9E772AF17CA909300E94EBC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = OC;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "East River Labs";
+			};
+			buildConfigurationList = C9E772B217CA909300E94EBC /* Build configuration list for PBXProject "OctopusConnector" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C9E772AE17CA909300E94EBC;
+			productRefGroup = C9E772B817CA909300E94EBC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C9E772B617CA909300E94EBC /* OctopusConnector */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C9E772B517CA909300E94EBC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9E772C517CA909300E94EBC /* InfoPlist.strings in Resources */,
+				C9E772CB17CA909300E94EBC /* Credits.rtf in Resources */,
+				C9E772D117CA909300E94EBC /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C9E772B317CA909300E94EBC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9E772C717CA909300E94EBC /* main.m in Sources */,
+				C9E772CE17CA909300E94EBC /* OCAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C9E772C317CA909300E94EBC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C9E772C417CA909300E94EBC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C9E772C917CA909300E94EBC /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C9E772CA17CA909300E94EBC /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		C9E772CF17CA909300E94EBC /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C9E772D017CA909300E94EBC /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C9E772D217CA909300E94EBC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		C9E772D317CA909300E94EBC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		C9E772D517CA909300E94EBC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OctopusConnector/OctopusConnector-Prefix.pch";
+				INFOPLIST_FILE = "OctopusConnector/OctopusConnector-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C9E772D617CA909300E94EBC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OctopusConnector/OctopusConnector-Prefix.pch";
+				INFOPLIST_FILE = "OctopusConnector/OctopusConnector-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C9E772B217CA909300E94EBC /* Build configuration list for PBXProject "OctopusConnector" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9E772D217CA909300E94EBC /* Debug */,
+				C9E772D317CA909300E94EBC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C9E772D417CA909300E94EBC /* Build configuration list for PBXNativeTarget "OctopusConnector" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9E772D517CA909300E94EBC /* Debug */,
+				C9E772D617CA909300E94EBC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C9E772AF17CA909300E94EBC /* Project object */;
+}
