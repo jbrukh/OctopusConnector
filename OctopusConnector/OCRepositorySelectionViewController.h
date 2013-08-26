@@ -9,5 +9,10 @@
 #import <Cocoa/Cocoa.h>
 #import "MASPreferencesViewController.h"
 
-@interface OCRepositorySelectionViewController : NSViewController<MASPreferencesViewController>
+@interface OCRepositorySelectionViewController : NSViewController<MASPreferencesViewController> {
+    IBOutlet NSTextField *repoPath;
+}
+
+- (IBAction)openFileSelection:(id)sender;
+
 @end

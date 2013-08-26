@@ -10,6 +10,7 @@
 
 NSString *const DRIVER_NAME = @"octopus";
 NSString *const MOCK_FILE = @"1fabece1-7a57-96ab-3de9-71da8446c52c";
+NSString *const OCTOPUS_WEBSITE = @"http://www.octopusmetrics.com";
 
 /* User Defaults Keys */
 NSString *const KEY_OCTOPUS__REPO = @"octopus__repo";

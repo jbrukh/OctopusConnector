@@ -19,5 +19,6 @@
 @property (nonatomic) NSInteger focusedAdvancedControlIndex;
 
 - (IBAction)openPreferences:(id)sender;
+- (IBAction)openWebsite:(id)sender;
 
 @end

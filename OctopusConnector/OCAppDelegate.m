@@ -10,6 +10,7 @@
 #import "MASPreferencesWindowController.h"
 #import "OCRepositorySelectionViewController.h"
 #import "OCDeviceSelectionViewController.h"
+#import "Constants.h"
 
 @implementation OCAppDelegate
 
@@ -58,6 +59,11 @@
 {
     [self.preferencesWindowController showWindow:nil];
 }
+
+- (IBAction)openWebsite:(id)sender {
+    [[NSWorkspace sharedWorkspace] openURL: [NSURL URLWithString:OCTOPUS_WEBSITE]];
+}
+
 
 #pragma mark -
 

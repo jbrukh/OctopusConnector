@@ -11,6 +11,7 @@
 
 extern NSString *const DRIVER_NAME;
 extern NSString *const MOCK_FILE;
+extern NSString *const OCTOPUS_WEBSITE;
 
 /* User Defaults Keys */
 

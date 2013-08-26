@@ -9,5 +9,9 @@
 #import <Cocoa/Cocoa.h>
 #import "MASPreferencesViewController.h"
 
-@interface OCDeviceSelectionViewController : NSViewController<MASPreferencesViewController>
+@interface OCDeviceSelectionViewController : NSViewController<MASPreferencesViewController, NSTableViewDelegate> {
+    IBOutlet NSTabView *tabView;
+    IBOutlet NSComboBox *avatarPortComboBox;
+}
+
 @end

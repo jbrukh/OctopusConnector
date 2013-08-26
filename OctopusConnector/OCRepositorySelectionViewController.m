@@ -7,6 +7,7 @@
 //
 
 #import "OCRepositorySelectionViewController.h"
+#import "Constants.h"
 
 @interface OCRepositorySelectionViewController ()
 
@@ -32,7 +33,7 @@
 
 - (NSImage *)toolbarItemImage
 {
-    return [NSImage imageNamed:NSImageNamePreferencesGeneral];
+    return [NSImage imageNamed:NSImageNameFolder];
 }
 
 - (NSString *)toolbarItemLabel
@@ -40,16 +41,37 @@
     return NSLocalizedString(@"Repository", @"Toolbar name for the repository preferences pane");
 }
 
+- (void)viewDidDisappear {
+    [self ensureRepoDir];
+}
+
 - (void)ensureRepoDir
 {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSString *repo = [defaults valueForKey:@"octopus__repo"];
+    NSString *repo = [defaults valueForKey:KEY_OCTOPUS__REPO];
     if ([repo length] <= 0) {
         NSMutableString *defaultDir = [NSMutableString stringWithString:NSHomeDirectory()];
         [defaultDir appendString:@"/.octopus"];
-        [defaults setValue:defaultDir forKey:@"octopus__repo"];
+        [defaults setValue:defaultDir forKey:KEY_OCTOPUS__REPO];
     }
 }
+
+-(IBAction)openFileSelection:(id)sender{
+    // Create the File Open Dialog class.
+    NSOpenPanel* openDlg = [NSOpenPanel openPanel];
+    
+    // Enable the selection of files in the dialog.
+    [openDlg setCanChooseFiles:NO];
+    [openDlg setCanChooseDirectories:YES];
+    if ([openDlg runModal] == NSOKButton)
+    {
+        // Get an array containing the full filenames of all
+        // files and directories selected.
+        NSURL* dir = [openDlg directoryURL];
+        [repoPath setStringValue:[dir relativePath]];
+    }
+}
+
 
 
 @end
