@@ -16,3 +16,4 @@ NSString *const OCTOPUS_WEBSITE = @"http://www.octopusmetrics.com";
 NSString *const KEY_OCTOPUS__REPO = @"octopus__repo";
 NSString *const KEY_OCTOPUS__PORT_AVATAR = @"octopus__port_avatar";
 NSString *const KEY_OCTOPUS__PORT_THINKGEAR = @"octopus__port_thinkgear";
+NSString *const KEY_OCTOPUS__SELECTED_DEVICE_MENU_INDEX = @"octopus__selected_device_menu_index";

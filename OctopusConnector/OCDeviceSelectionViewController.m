@@ -40,6 +40,14 @@
     return NSLocalizedString(@"Devices", @"Toolbar name for the devices preferences pane");
 }
 
+- (void)awakeFromNib {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSLog(@"%@", [defaults objectForKey:KEY_OCTOPUS__SELECTED_DEVICE_MENU_INDEX]);
+    if ([defaults objectForKey:KEY_OCTOPUS__SELECTED_DEVICE_MENU_INDEX] == NULL) {
+        [deviceSelectionPopupButton selectItemAtIndex:2];
+    }
+}
+
 - (void)viewWillAppear {
     NSTabViewItem *selectedItem = [tabView selectedTabViewItem];
     [self tabView:tabView didSelectTabViewItem:selectedItem];

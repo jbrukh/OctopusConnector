@@ -58,6 +58,7 @@
 - (IBAction)openPreferences:(id)sender
 {
     [self.preferencesWindowController showWindow:nil];
+    [NSApp activateIgnoringOtherApps:YES];
 }
 
 - (IBAction)openWebsite:(id)sender {
