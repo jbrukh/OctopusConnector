@@ -16,5 +16,7 @@ extern NSString *const OCTOPUS_WEBSITE;
 /* User Defaults Keys */
 
 extern NSString *const KEY_OCTOPUS__REPO;
+extern NSString *const KEY_OCTOPUS__PORT_AVATAR;
+extern NSString *const KEY_OCTOPUS__PORT_THINKGEAR;
 
 #endif

@@ -12,6 +12,10 @@
 @interface OCDeviceSelectionViewController : NSViewController<MASPreferencesViewController, NSTableViewDelegate> {
     IBOutlet NSTabView *tabView;
     IBOutlet NSComboBox *avatarPortComboBox;
+    IBOutlet NSComboBox *neuroskyPortComboBox;
+    IBOutlet NSPopUpButton *deviceSelectionPopupButton;
 }
+
+-(IBAction)selectDeviceTab:(id)sender;
 
 @end

@@ -7,10 +7,11 @@
 //
 
 #import "OCDeviceSelectionViewController.h"
+#import "Constants.h"
 
-#define TAB_AVATAR     1
-#define TAB_NEUROSKY   2
-#define TAB_DEMODEVICE 3
+#define TAB_AVATAR      1
+#define TAB_THINKGEAR   2
+#define TAB_DEMODEVICE  3
 
 @interface OCDeviceSelectionViewController ()
 
@@ -49,8 +50,8 @@
         case TAB_AVATAR:
             [self selectedAvatarPanel];
             break;
-        case TAB_NEUROSKY:
-            [self selectedNeuroskyPanel];
+        case TAB_THINKGEAR:
+            [self selectedThinkGearPanel];
             break;
         case TAB_DEMODEVICE:
             [self selectedDemoDevicePanel];
@@ -64,19 +65,33 @@
     NSArray *ports = [self listPossiblePortsWithPrefix:@"tty.Avatar"];
     [avatarPortComboBox removeAllItems];
     [avatarPortComboBox addItemsWithObjectValues:ports];
+    [self ensureComboSelected:avatarPortComboBox withUserDefault:KEY_OCTOPUS__PORT_AVATAR];
 }
 
-- (void)selectedNeuroskyPanel {
-    [self listPossiblePortsWithPrefix:@"tty.BrainBand"];
+- (void)selectedThinkGearPanel {
+    NSArray *ports = [self listPossiblePortsWithPrefix:@"tty.BrainBand"];
+    [neuroskyPortComboBox removeAllItems];
+    [neuroskyPortComboBox addItemsWithObjectValues:ports];
+    [self ensureComboSelected:neuroskyPortComboBox withUserDefault:KEY_OCTOPUS__PORT_THINKGEAR];
+}
+
+- (void)ensureComboSelected:(NSComboBox *)comboBox withUserDefault:(NSString *)key {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if ([[defaults valueForKey:key] length] <= 0 && [comboBox indexOfSelectedItem] < 0 && [comboBox numberOfItems] > 0) {
+        [comboBox selectItemAtIndex:0];
+    }
 }
 
 - (void)selectedDemoDevicePanel {
     
 }
 
+- (IBAction)selectDeviceTab:(id)sender
+{
+    [tabView selectTabViewItemAtIndex:[deviceSelectionPopupButton indexOfSelectedItem]];
+}
+
 - (NSArray *)listPossiblePortsWithPrefix:(NSString*)prefix {
-//    NSFileManager *fm = [NSFileManager defaultManager];
-//    NSArray *dirContents = [fm contentsOfDirectoryAtPath:@"/dev" error:nil];
     NSString *root = @"/dev";
     NSDirectoryEnumerator *dirEnum = [[NSFileManager defaultManager] enumeratorAtPath:root];
     NSString *file;
@@ -89,13 +104,6 @@
         }
     }
     
-//    NSMutableString *predicate = [NSMutableString stringWithString:@"self BEGINSWITH 'tty."];
-//    [predicate appendString:prefix];
-//    [predicate appendString:@"'"];
-//    
-//    NSPredicate *fltr = [NSPredicate predicateWithFormat:predicate];
-//    NSArray *ports = [dirContents filteredArrayUsingPredicate:fltr];
-    NSLog(@"%@", results);
     return results;
 }
 

@@ -14,3 +14,5 @@ NSString *const OCTOPUS_WEBSITE = @"http://www.octopusmetrics.com";
 
 /* User Defaults Keys */
 NSString *const KEY_OCTOPUS__REPO = @"octopus__repo";
+NSString *const KEY_OCTOPUS__PORT_AVATAR = @"octopus__port_avatar";
+NSString *const KEY_OCTOPUS__PORT_THINKGEAR = @"octopus__port_thinkgear";
