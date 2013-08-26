@@ -27,7 +27,7 @@
 
 - (NSImage *)toolbarItemImage
 {
-    return [NSImage imageNamed:NSImageNamePathTemplate];
+    return [NSApp applicationIconImage];
 }
 
 - (NSString *)toolbarItemLabel
