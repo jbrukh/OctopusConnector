@@ -18,6 +18,21 @@
     // Insert code here to initialize your application
 }
 
+- (void)awakeFromNib {
+    statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
+    [statusItem setHighlightMode:YES];
+    [statusItem setMenu:statusMenu];
+    [self setStatusItemUp];
+}
+
+- (void)setStatusItemUp {
+    [statusItem setImage:[NSImage imageNamed:@"icon_up.png"]];
+}
+
+- (void)setStatusItemDown {
+    [statusItem setImage:[NSImage imageNamed:@"icon_down.png"]];
+}
+
 #pragma mark - Public accessors
 
 - (NSWindowController *)preferencesWindowController

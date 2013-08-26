@@ -10,6 +10,8 @@
 
 @interface OCAppDelegate : NSObject <NSApplicationDelegate> {
     NSWindowController *_preferencesWindowController;
+    NSStatusItem *statusItem;
+    IBOutlet NSMenu *statusMenu;
 }
 
 @property (assign) IBOutlet NSWindow *window;
