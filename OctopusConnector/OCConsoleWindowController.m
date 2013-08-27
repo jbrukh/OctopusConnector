@@ -1,22 +1,23 @@
 //
-//  OCConsoleController.m
-//  OctopusStatusBar
+//  OCConsoleWindowController.m
+//  OctopusConnector
 //
-//  Created by Jake Brukhman on 5/26/13.
-//  Copyright (c) 2013 Octopus. All rights reserved.
+//  Created by Jake Brukhman on 8/26/13.
+//  Copyright (c) 2013 East River Labs. All rights reserved.
 //
 
-#import "OCConsoleController.h"
+#import "OCConsoleWindowController.h"
 
-@interface OCConsoleController ()
+@interface OCConsoleWindowController ()
 
 @end
 
-@implementation OCConsoleController
+@implementation OCConsoleWindowController
+@synthesize textView;
 
 - (id)init
 {
-    self = [super initWithWindowNibName:@"OCConsole"];
+    self = [super initWithWindowNibName:@"OCConsoleWindow"];
     if (self) {
     }
     return self;
@@ -32,28 +33,6 @@
     [textView setBackgroundColor:colorFromRGB(100, 100, 100)];
 }
 
-/*
- Show the console.
- */
--(void) show {
-    [NSApp activateIgnoringOtherApps:YES];
-    [[self window] setIsVisible:YES];
-}
-
-/*
- Hide the console.
- */
--(void) hide {
-    [[self window] setIsVisible:NO];
-}
-
--(BOOL) isVisible {
-    return [[self window] isVisible];
-}
-
-/*
- Append data to the console.
- */
 - (void)appendConsole:(NSString *)str{
     NSString *full;
     full = [[textView string] stringByAppendingString:str];
@@ -70,5 +49,6 @@ static NSColor *colorFromRGB(unsigned char r, unsigned char g, unsigned char b)
     return [NSColor colorWithCalibratedRed:(r/255.0f) green:(g/255.0f) blue:(b/255.0f) alpha:1.0];
 }
 
-@end
 
+
+@end

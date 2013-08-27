@@ -15,9 +15,6 @@
     self = [super init];
     if (self) {
         delegate = (OCAppDelegate *)[[NSApplication sharedApplication] delegate];
-        
-        // subscribe to output from the process
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleOutputFromProcess:) name: NSFileHandleReadCompletionNotification object:nil];
     }
     return self;
 }
@@ -45,13 +42,17 @@
     
     [delegate setStatusItemUp];
     
+    // subscribe to output from the process
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleOutputFromProcess:) name: NSFileHandleReadCompletionNotification object:handle];
+
+    
     // set termination handler
     id weakDelegate = delegate;
     id weakSelf = self;
-    [task setTerminationHandler:^(NSTask *task){
+    [task setTerminationHandler:^(NSTask *localTask){
         // TODO: send notification here with exit code
         [weakDelegate setStatusItemDown];
-        int rc = [task terminationStatus];
+        int rc = [localTask terminationStatus];
         printf("EXIT CODE %d", rc);
         [[NSNotificationCenter defaultCenter] removeObserver:weakSelf];
     }];
@@ -62,12 +63,12 @@
 }
 
 -(NSArray *)getArgs {
-//    NSMutableArray *result = [NSMutableArray array];
+    NSMutableArray *result = [NSMutableArray array];
 //    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
 //
 //    if (delegate.mockDevice) {
-//        [result addObject:@"--mockDevice"];
+        [result addObject:@"--mockDevice"];
 //        NSString* obfFile =[[NSBundle mainBundle] pathForResource:MOCK_FILE ofType:@""];
 //        [result addObject:@"--mockFile"];
 //        [result addObject:obfFile];
@@ -79,7 +80,7 @@
 //    }
 //    [result addObject:@"--repo"];
 //    [result addObject:delegate.repoPath];
-    return [[NSArray alloc] init]; //result;
+    return result;
 }
 
 -(void)stopServer

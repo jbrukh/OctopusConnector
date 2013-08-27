@@ -11,6 +11,7 @@
 #import "OCRepositorySelectionViewController.h"
 #import "OCDeviceSelectionViewController.h"
 #import "Constants.h"
+#import "OCConsoleWindowController.h"
 
 @implementation OCAppDelegate
 
@@ -22,6 +23,7 @@
     [statusItem setHighlightMode:YES];
     [statusItem setMenu:statusMenu];
     [self setStatusItemUp];
+
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
@@ -29,12 +31,20 @@
     // subscribe to console data notifications
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleConsoleOutputNotification:) name:OCConsoleOutputNotification object:nil];
     
+    // initialize the console, order matters!
+    consoleController = [[OCConsoleWindowController alloc] init];
+    // this will force the textView to be available for
+    // input behind the scenes (it gets deserialized)
+    [consoleController.window awakeFromNib];
+    
+    // version
+    NSString *version =[[[NSBundle mainBundle] infoDictionary] valueForKey:@"CFBundleVersion"];
+    NSString *fullVersion = [@"Mac Release " stringByAppendingFormat:@"%@\n\n", version];
+    [consoleController appendConsole:fullVersion];
+    
     // initialize the process controller
     processController = [[OCProcessController alloc] init];
-    consoleController = [[OCConsoleController alloc] init];
     [processController startServer];
-    
-    
 }
 
 - (void)applicationWillTerminate:(NSNotification *)notification
@@ -73,10 +83,12 @@
 }
 
 - (IBAction)toggleConsole:(id)sender {
-    if (![consoleController isVisible] || ![consoleController.window isKeyWindow]) {
-        [consoleController show];
+    if (![consoleController.window isVisible]
+        || ![consoleController.window isKeyWindow]) {
+        [consoleController.window setIsVisible:YES];
+        [NSApp activateIgnoringOtherApps:YES];
     } else {
-        [consoleController hide];
+        [consoleController.window setIsVisible:NO];
     }
 }
 
@@ -94,7 +106,6 @@
 
 - (void)handleConsoleOutputNotification:(NSNotification *)notification
 {
-    // TODO: write to console
     NSString *data = [notification object];
     [consoleController appendConsole:data];
 }
