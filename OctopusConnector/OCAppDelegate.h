@@ -7,11 +7,13 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "OCProcessController.h"
 
 @interface OCAppDelegate : NSObject <NSApplicationDelegate> {
     NSWindowController *_preferencesWindowController;
     NSStatusItem *statusItem;
     IBOutlet NSMenu *statusMenu;
+    OCProcessController *processController;
 }
 
 @property (assign) IBOutlet NSWindow *window;

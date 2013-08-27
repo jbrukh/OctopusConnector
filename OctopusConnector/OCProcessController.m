@@ -18,7 +18,7 @@
     }
     return self;
 }
-- (void)startConnector
+- (void)startServer
 {
     NSLog(@"starting Octopus...");
     // check if the task is running
@@ -76,7 +76,7 @@
     return [[NSArray alloc] init]; //result;
 }
 
--(void)stopConnector
+-(void)stopServer
 {
     NSLog(@"stopping Octopus...");
     if (task != NULL && [task isRunning]) {

@@ -18,7 +18,7 @@
     OCAppDelegate *delegate;
 }
 
--(void) startConnector;
--(void) stopConnector;
+-(void) startServer;
+-(void) stopServer;
 
 @end

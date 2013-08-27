@@ -14,10 +14,7 @@
 
 @implementation OCAppDelegate
 
-- (void)applicationDidFinishLaunching:(NSNotification *)aNotification
-{
-    // Insert code here to initialize your application
-}
+#pragma mark - Initialization
 
 - (void)awakeFromNib {
     statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
@@ -26,12 +23,16 @@
     [self setStatusItemUp];
 }
 
-- (void)setStatusItemUp {
-    [statusItem setImage:[NSImage imageNamed:@"icon_up.png"]];
+- (void)applicationDidFinishLaunching:(NSNotification *)aNotification
+{
+    // initialize the process controller
+    processController = [[OCProcessController alloc] init];
+    [processController startServer];
 }
 
-- (void)setStatusItemDown {
-    [statusItem setImage:[NSImage imageNamed:@"icon_down.png"]];
+- (void)applicationWillTerminate:(NSNotification *)notification
+{
+    [processController stopServer];
 }
 
 #pragma mark - Public accessors
@@ -64,6 +65,15 @@
     [[NSWorkspace sharedWorkspace] openURL: [NSURL URLWithString:OCTOPUS_WEBSITE]];
 }
 
+#pragma mark - Methods
+
+- (void)setStatusItemUp {
+    [statusItem setImage:[NSImage imageNamed:@"icon_up.png"]];
+}
+
+- (void)setStatusItemDown {
+    [statusItem setImage:[NSImage imageNamed:@"icon_down.png"]];
+}
 
 #pragma mark - FocusedIndex
 
