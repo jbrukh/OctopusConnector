@@ -17,6 +17,7 @@
 #pragma mark - Initialization
 
 - (void)awakeFromNib {
+    // initialize the status bar icon
     statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
     [statusItem setHighlightMode:YES];
     [statusItem setMenu:statusMenu];
@@ -25,6 +26,8 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
+    // subscribe to console data notifications
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleConsoleOutputNotification:) name:OCConsoleOutputNotification object:nil];
     // initialize the process controller
     processController = [[OCProcessController alloc] init];
     [processController startServer];
@@ -62,7 +65,7 @@
 }
 
 - (IBAction)openWebsite:(id)sender {
-    [[NSWorkspace sharedWorkspace] openURL: [NSURL URLWithString:OCTOPUS_WEBSITE]];
+    [[NSWorkspace sharedWorkspace] openURL: [NSURL URLWithString:OCOctopusWebsite]];
 }
 
 #pragma mark - Methods
@@ -89,5 +92,13 @@ NSString *const kFocusedAdvancedControlIndex = @"FocusedAdvancedControlIndex";
     [[NSUserDefaults standardUserDefaults] setInteger:focusedAdvancedControlIndex forKey:kFocusedAdvancedControlIndex];
 }
 
+#pragma mark - OCConsoleOutputNotification
+
+- (void)handleConsoleOutputNotification:(NSNotification *)notification
+{
+    // TODO: write to console
+    NSString *data = [notification object];
+    NSLog(@"### %@", data);
+}
 
 @end

@@ -8,12 +8,16 @@
 
 #include "Constants.h"
 
-NSString *const DRIVER_NAME = @"octopus";
+NSString *const OCServerBinary = @"octopus";
 NSString *const MOCK_FILE = @"1fabece1-7a57-96ab-3de9-71da8446c52c";
-NSString *const OCTOPUS_WEBSITE = @"http://www.octopusmetrics.com";
+NSString *const OCOctopusWebsite = @"http://www.octopusmetrics.com";
 
 /* User Defaults Keys */
+
 NSString *const KEY_OCTOPUS__REPO = @"octopus__repo";
 NSString *const KEY_OCTOPUS__PORT_AVATAR = @"octopus__port_avatar";
 NSString *const KEY_OCTOPUS__PORT_THINKGEAR = @"octopus__port_thinkgear";
 NSString *const KEY_OCTOPUS__SELECTED_DEVICE_MENU_INDEX = @"octopus__selected_device_menu_index";
+
+/* Notifications */
+NSString *const OCConsoleOutputNotification = @"OCConsoleOutputNotification";

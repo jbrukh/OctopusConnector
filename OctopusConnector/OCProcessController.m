@@ -17,22 +17,23 @@
         delegate = (OCAppDelegate *)[[NSApplication sharedApplication] delegate];
         
         // subscribe to output from the process
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleOutputFromProcess:) name: NSFileHandleReadCompletionNotification object:handle];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleOutputFromProcess:) name: NSFileHandleReadCompletionNotification object:nil];
     }
     return self;
 }
 - (void)startServer
 {
-    NSLog(@"starting Octopus...");
+    NSLog(@"Starting Octopus Server.");
+    
     // check if the task is running
     if (task != NULL && [task isRunning]) {
-        NSLog(@"Octopus is already running.");
+        NSLog(@"Octopus Server is already running.");
         return;
     }
     
     //create the task
     task = [[NSTask alloc] init];
-    NSString* resourcePath = [[NSBundle mainBundle] pathForResource:DRIVER_NAME ofType:@""];
+    NSString* resourcePath = [[NSBundle mainBundle] pathForResource:OCServerBinary ofType:@""];
     
     [task setLaunchPath:resourcePath];
     NSArray *args = [self getArgs];
@@ -43,14 +44,17 @@
     [task setStandardError:pipe];
     
     [delegate setStatusItemUp];
+    
     // set termination handler
     id weakDelegate = delegate;
     id weakSelf = self;
     [task setTerminationHandler:^(NSTask *task){
+        // TODO: send notification here with exit code
         [weakDelegate setStatusItemDown];
+        int rc = [task terminationStatus];
+        printf("EXIT CODE %d", rc);
         [[NSNotificationCenter defaultCenter] removeObserver:weakSelf];
     }];
-    
     handle = [pipe fileHandleForReading];
   
     [task launch];
@@ -81,7 +85,7 @@
 
 -(void)stopServer
 {
-    NSLog(@"stopping Octopus...");
+    NSLog(@"Stopping Octopus Server.");
     if (task != NULL && [task isRunning]) {
         [task terminate];
         [task waitUntilExit];
@@ -96,8 +100,9 @@
         NSData *data = [[notification userInfo] objectForKey:NSFileHandleNotificationDataItem];
         NSString *str;
         str = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-        NSLog(@"%@", str);
-        //[delegate appendConsole:str];
+        
+        // notify observers
+        [[NSNotificationCenter defaultCenter] postNotificationName:OCConsoleOutputNotification object:str];
     }
 }
 
