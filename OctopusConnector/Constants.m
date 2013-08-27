@@ -11,7 +11,7 @@
 /* Constants */
 
 NSString *const OCServerBinary                              = @"octopus";
-NSString *const OCDemoDataFile                              = @"1fabece1-7a57-96ab-3de9-71da8446c52c";
+NSString *const OCDemoDataFile                              = @"6cdc3b4a-2de7-04e0-7211-c6ae23117f1e";
 NSString *const OCOctopusWebsite                            = @"http://www.octopusmetrics.com";
 
 /* Device Names */

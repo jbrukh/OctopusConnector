@@ -75,6 +75,8 @@
         NSString* obfFile =[[NSBundle mainBundle] pathForResource:OCDemoDataFile ofType:@""];
         [result addObject:@"--mockFile"];
         [result addObject:obfFile];
+        [result addObject:@"--mockChannels"];
+        [result addObject:@"8"];
     }
     else if ([device isEqualToString:OCDeviceNameAvatar]) {
         [result addObject:@"--device"];
