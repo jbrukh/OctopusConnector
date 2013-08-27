@@ -70,7 +70,7 @@
     [avatarPortComboBox removeAllItems];
     [avatarPortComboBox addItemsWithObjectValues:ports];
     [self ensureComboSelected:avatarPortComboBox withUserDefault:OCKeyPortAvatar];
-    
+    [defaults setValue:OCDeviceNameAvatar forKey:OCKeyDevice];
 }
 
 - (void)selectedThinkGearPanel {
@@ -78,6 +78,7 @@
     [neuroskyPortComboBox removeAllItems];
     [neuroskyPortComboBox addItemsWithObjectValues:ports];
     [self ensureComboSelected:neuroskyPortComboBox withUserDefault:OCKeyPortThinkgear];
+    [defaults setValue:OCDeviceNameThinkgear forKey:OCKeyDevice];
 }
 
 - (void)ensureComboSelected:(NSComboBox *)comboBox withUserDefault:(NSString *)key {
@@ -87,7 +88,7 @@
 }
 
 - (void)selectedDemoDevicePanel {
-    
+    [defaults setValue:OCDeviceNameDemoDevice forKey:OCKeyDevice];
 }
 
 - (IBAction)selectDeviceTab:(id)sender

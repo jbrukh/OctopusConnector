@@ -65,8 +65,7 @@
 //    NSMutableArray *result = [NSMutableArray array];
 //    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
-//    
-//    
+//
 //    if (delegate.mockDevice) {
 //        [result addObject:@"--mockDevice"];
 //        NSString* obfFile =[[NSBundle mainBundle] pathForResource:MOCK_FILE ofType:@""];
