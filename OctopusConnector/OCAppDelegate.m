@@ -52,7 +52,6 @@
     return _preferencesWindowController;
 }
 
-
 #pragma mark - Actions
 
 - (IBAction)openPreferences:(id)sender
@@ -66,7 +65,7 @@
 }
 
 
-#pragma mark -
+#pragma mark - FocusedIndex
 
 NSString *const kFocusedAdvancedControlIndex = @"FocusedAdvancedControlIndex";
 

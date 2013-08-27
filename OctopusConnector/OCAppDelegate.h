@@ -18,6 +18,10 @@
 @property (nonatomic, readonly) NSWindowController *preferencesWindowController;
 @property (nonatomic) NSInteger focusedAdvancedControlIndex;
 
+
+- (void)setStatusItemUp;
+- (void)setStatusItemDown;
+
 - (IBAction)openPreferences:(id)sender;
 - (IBAction)openWebsite:(id)sender;
 
