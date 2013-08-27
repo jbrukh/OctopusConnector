@@ -28,9 +28,13 @@
 {
     // subscribe to console data notifications
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleConsoleOutputNotification:) name:OCConsoleOutputNotification object:nil];
+    
     // initialize the process controller
     processController = [[OCProcessController alloc] init];
+    consoleController = [[OCConsoleController alloc] init];
     [processController startServer];
+    
+    
 }
 
 - (void)applicationWillTerminate:(NSNotification *)notification
@@ -66,6 +70,14 @@
 
 - (IBAction)openWebsite:(id)sender {
     [[NSWorkspace sharedWorkspace] openURL: [NSURL URLWithString:OCOctopusWebsite]];
+}
+
+- (IBAction)toggleConsole:(id)sender {
+    if (![consoleController isVisible]) {
+        [consoleController show];
+    } else {
+        [consoleController hide];
+    }
 }
 
 #pragma mark - Methods

@@ -8,12 +8,14 @@
 
 #import <Cocoa/Cocoa.h>
 #import "OCProcessController.h"
+#import "OCConsoleController.h"
 
 @interface OCAppDelegate : NSObject <NSApplicationDelegate> {
     NSWindowController *_preferencesWindowController;
     NSStatusItem *statusItem;
     IBOutlet NSMenu *statusMenu;
     OCProcessController *processController;
+    OCConsoleController *consoleController;
 }
 
 @property (assign) IBOutlet NSWindow *window;
@@ -25,5 +27,6 @@
 
 - (IBAction)openPreferences:(id)sender;
 - (IBAction)openWebsite:(id)sender;
+- (IBAction)toggleConsole:(id)sender;
 
 @end
