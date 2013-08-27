@@ -41,8 +41,8 @@
 }
 
 - (void)awakeFromNib {
-    NSLog(@"%@", [defaults objectForKey:KEY_OCTOPUS__SELECTED_DEVICE_MENU_INDEX]);
-    if ([defaults objectForKey:KEY_OCTOPUS__SELECTED_DEVICE_MENU_INDEX] == NULL) {
+    NSLog(@"%@", [defaults objectForKey:OCKeySelectedDeviceMenuIndex]);
+    if ([defaults objectForKey:OCKeySelectedDeviceMenuIndex] == NULL) {
         [deviceSelectionPopupButton selectItemAtIndex:2];
     }
 }
@@ -72,7 +72,7 @@
     NSArray *ports = [self listPossiblePortsWithPrefix:@"tty.Avatar"];
     [avatarPortComboBox removeAllItems];
     [avatarPortComboBox addItemsWithObjectValues:ports];
-    [self ensureComboSelected:avatarPortComboBox withUserDefault:KEY_OCTOPUS__PORT_AVATAR];
+    [self ensureComboSelected:avatarPortComboBox withUserDefault:OCKeyPortAvatar];
     
 }
 
@@ -80,7 +80,7 @@
     NSArray *ports = [self listPossiblePortsWithPrefix:@"tty.BrainBand"];
     [neuroskyPortComboBox removeAllItems];
     [neuroskyPortComboBox addItemsWithObjectValues:ports];
-    [self ensureComboSelected:neuroskyPortComboBox withUserDefault:KEY_OCTOPUS__PORT_THINKGEAR];
+    [self ensureComboSelected:neuroskyPortComboBox withUserDefault:OCKeyPortThinkgear];
 }
 
 - (void)ensureComboSelected:(NSComboBox *)comboBox withUserDefault:(NSString *)key {

@@ -21,13 +21,15 @@ extern NSString *const OCDeviceNameAvatar;
 extern NSString *const OCDeviceNameThinkgear;
 extern NSString *const OCDeviceNameDemoDevice;
 
-
 /* User Defaults Keys */
 
-extern NSString *const KEY_OCTOPUS__REPO;
-extern NSString *const KEY_OCTOPUS__PORT_AVATAR;
-extern NSString *const KEY_OCTOPUS__PORT_THINKGEAR;
-extern NSString *const KEY_OCTOPUS__SELECTED_DEVICE_MENU_INDEX;
+extern NSString *const OCKeyRepo;
+extern NSString *const OCKeyDevice;
+extern NSString *const OCKeyPortAvatar;
+extern NSString *const OCKeyPortThinkgear;
+extern NSString *const OCKeySelectedDeviceMenuIndex;
+extern NSString *const OCKeySelectedDeviceTabIndex;
+
 
 /* Notifications */
 

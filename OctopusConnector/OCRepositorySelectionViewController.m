@@ -48,11 +48,11 @@
 - (void)ensureRepoDir
 {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSString *repo = [defaults valueForKey:KEY_OCTOPUS__REPO];
+    NSString *repo = [defaults valueForKey:OCKeyRepo];
     if ([repo length] <= 0) {
         NSMutableString *defaultDir = [NSMutableString stringWithString:NSHomeDirectory()];
         [defaultDir appendString:@"/.octopus"];
-        [defaults setValue:defaultDir forKey:KEY_OCTOPUS__REPO];
+        [defaults setValue:defaultDir forKey:OCKeyRepo];
     }
 }
 

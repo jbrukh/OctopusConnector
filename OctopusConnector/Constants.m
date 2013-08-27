@@ -22,10 +22,12 @@ NSString *const OCDeviceNameDemoDevice                      = @"mock_avatar";
 
 /* User Defaults Keys */
 
-NSString *const KEY_OCTOPUS__REPO                           = @"octopus__repo";
-NSString *const KEY_OCTOPUS__PORT_AVATAR                    = @"octopus__port_avatar";
-NSString *const KEY_OCTOPUS__PORT_THINKGEAR                 = @"octopus__port_thinkgear";
-NSString *const KEY_OCTOPUS__SELECTED_DEVICE_MENU_INDEX     = @"octopus__selected_device_menu_index";
+NSString *const OCKeyRepo                                   = @"OCKeyRepo";
+NSString *const OCKeyDevice                                 = @"OCKeyDevice";
+NSString *const OCKeyPortAvatar                             = @"OCKeyPortAvatar";
+NSString *const OCKeyPortThinkgear                          = @"OCKeyPortThinkgear";
+NSString *const OCKeySelectedDeviceMenuIndex                = @"OCKeySelectedDeviceMenuIndex";
+NSString *const OCKeySelectedDeviceTabIndex                 = @"OCKeySelectedDeviceTabIndex";
 
 /* Notifications */
 
