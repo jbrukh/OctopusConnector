@@ -13,7 +13,7 @@
 		C9526B5D17CB3CCF00C854F3 /* OCProcessController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9526B5C17CB3CCF00C854F3 /* OCProcessController.m */; };
 		C9526B5F17CC275900C854F3 /* octopus in Resources */ = {isa = PBXBuildFile; fileRef = C9526B5E17CC275900C854F3 /* octopus */; };
 		C9526B6417CC3F8200C854F3 /* OCConsoleController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9526B6217CC3D0A00C854F3 /* OCConsoleController.m */; };
-		C9526B6617CC41DC00C854F3 /* OCConsole.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9526B6517CC41DC00C854F3 /* OCConsole.xib */; };
+		C9526B6817CC436100C854F3 /* OCConsole.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9526B6717CC436100C854F3 /* OCConsole.xib */; };
 		C9E772BB17CA909300E94EBC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9E772BA17CA909300E94EBC /* Cocoa.framework */; };
 		C9E772C517CA909300E94EBC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9E772C317CA909300E94EBC /* InfoPlist.strings */; };
 		C9E772C717CA909300E94EBC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E772C617CA909300E94EBC /* main.m */; };
@@ -43,7 +43,7 @@
 		C9526B5E17CC275900C854F3 /* octopus */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = octopus; sourceTree = "<group>"; };
 		C9526B6117CC3D0A00C854F3 /* OCConsoleController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCConsoleController.h; sourceTree = "<group>"; };
 		C9526B6217CC3D0A00C854F3 /* OCConsoleController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCConsoleController.m; sourceTree = "<group>"; };
-		C9526B6517CC41DC00C854F3 /* OCConsole.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OCConsole.xib; sourceTree = "<group>"; };
+		C9526B6717CC436100C854F3 /* OCConsole.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OCConsole.xib; sourceTree = "<group>"; };
 		C9E772B717CA909300E94EBC /* OctopusConnector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OctopusConnector.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9E772BA17CA909300E94EBC /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		C9E772BD17CA909300E94EBC /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -97,7 +97,7 @@
 			children = (
 				C9526B6117CC3D0A00C854F3 /* OCConsoleController.h */,
 				C9526B6217CC3D0A00C854F3 /* OCConsoleController.m */,
-				C9526B6517CC41DC00C854F3 /* OCConsole.xib */,
+				C9526B6717CC436100C854F3 /* OCConsole.xib */,
 			);
 			name = Windows;
 			sourceTree = "<group>";
@@ -266,7 +266,7 @@
 				C9E772FE17CAA05800E94EBC /* OCDeviceSelectionView.xib in Resources */,
 				C9526B5117CAAE8D00C854F3 /* MASPreferencesWindow.xib in Resources */,
 				C9526B5F17CC275900C854F3 /* octopus in Resources */,
-				C9526B6617CC41DC00C854F3 /* OCConsole.xib in Resources */,
+				C9526B6817CC436100C854F3 /* OCConsole.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -73,7 +73,7 @@
 }
 
 - (IBAction)toggleConsole:(id)sender {
-    if (![consoleController isVisible]) {
+    if (![consoleController isVisible] || ![consoleController.window isKeyWindow]) {
         [consoleController show];
     } else {
         [consoleController hide];
@@ -96,7 +96,7 @@
 {
     // TODO: write to console
     NSString *data = [notification object];
-    NSLog(@"### %@", data);
+    [consoleController appendConsole:data];
 }
 
 @end
