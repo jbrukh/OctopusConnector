@@ -78,20 +78,6 @@
     [statusItem setImage:[NSImage imageNamed:@"icon_down.png"]];
 }
 
-#pragma mark - FocusedIndex
-
-NSString *const kFocusedAdvancedControlIndex = @"FocusedAdvancedControlIndex";
-
-- (NSInteger)focusedAdvancedControlIndex
-{
-    return [[NSUserDefaults standardUserDefaults] integerForKey:kFocusedAdvancedControlIndex];
-}
-
-- (void)setFocusedAdvancedControlIndex:(NSInteger)focusedAdvancedControlIndex
-{
-    [[NSUserDefaults standardUserDefaults] setInteger:focusedAdvancedControlIndex forKey:kFocusedAdvancedControlIndex];
-}
-
 #pragma mark - OCConsoleOutputNotification
 
 - (void)handleConsoleOutputNotification:(NSNotification *)notification

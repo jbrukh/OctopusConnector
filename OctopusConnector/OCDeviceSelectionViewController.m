@@ -9,9 +9,9 @@
 #import "OCDeviceSelectionViewController.h"
 #import "Constants.h"
 
-#define TAB_AVATAR      1
-#define TAB_THINKGEAR   2
-#define TAB_DEMODEVICE  3
+#define TAB_AVATAR      0
+#define TAB_THINKGEAR   1
+#define TAB_DEMODEVICE  2
 
 @interface OCDeviceSelectionViewController ()
 
@@ -22,6 +22,7 @@
 - (id)init
 {
     id viewController = [super initWithNibName:@"OCDeviceSelectionView" bundle:nil];
+    defaults = [NSUserDefaults standardUserDefaults];
     return viewController;
 }
 
@@ -41,15 +42,11 @@
 }
 
 - (void)awakeFromNib {
-    NSLog(@"%@", [defaults objectForKey:OCKeySelectedDeviceMenuIndex]);
+    NSLog(@"blah %@", [defaults objectForKey:OCKeySelectedDeviceMenuIndex]);
     if ([defaults objectForKey:OCKeySelectedDeviceMenuIndex] == NULL) {
-        [deviceSelectionPopupButton selectItemAtIndex:2];
+        [deviceSelectionPopupButton selectItemAtIndex:TAB_DEMODEVICE];
+        [tabView selectTabViewItemAtIndex:TAB_DEMODEVICE];
     }
-}
-
-- (void)viewWillAppear {
-    NSTabViewItem *selectedItem = [tabView selectedTabViewItem];
-    [self tabView:tabView didSelectTabViewItem:selectedItem];
 }
 
 - (void)tabView:(NSTabView *)tabView didSelectTabViewItem:(NSTabViewItem *)tabViewItem {
@@ -84,7 +81,7 @@
 }
 
 - (void)ensureComboSelected:(NSComboBox *)comboBox withUserDefault:(NSString *)key {
-    if ([[defaults valueForKey:key] length] <= 0 && [comboBox indexOfSelectedItem] < 0 && [comboBox numberOfItems] > 0) {
+    if ([defaults objectForKey:key] == NULL && [comboBox indexOfSelectedItem] < 0 && [comboBox numberOfItems] > 0) {
         [comboBox selectItemAtIndex:0];
     }
 }
