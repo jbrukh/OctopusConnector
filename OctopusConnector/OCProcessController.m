@@ -15,6 +15,9 @@
     self = [super init];
     if (self) {
         delegate = (OCAppDelegate *)[[NSApplication sharedApplication] delegate];
+        
+        // subscribe to output from the process
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleOutputFromProcess:) name: NSFileHandleReadCompletionNotification object:handle];
     }
     return self;
 }
@@ -49,7 +52,7 @@
     }];
     
     handle = [pipe fileHandleForReading];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleNotification:) name: NSFileHandleReadCompletionNotification object: handle];
+  
     [task launch];
     [handle readInBackgroundAndNotify];
 }
@@ -86,7 +89,7 @@
     }
 }
 
--(void)handleNotification:(NSNotification *)notification
+-(void)handleOutputFromProcess:(NSNotification *)notification
 {
     if (task.isRunning) {
         [handle readInBackgroundAndNotify];
