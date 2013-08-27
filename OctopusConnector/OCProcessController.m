@@ -42,10 +42,6 @@
     
     [delegate setStatusItemUp];
     
-    // subscribe to output from the process
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleOutputFromProcess:) name: NSFileHandleReadCompletionNotification object:handle];
-
-    
     // set termination handler
     id weakDelegate = delegate;
     id weakSelf = self;
@@ -57,7 +53,7 @@
         [[NSNotificationCenter defaultCenter] removeObserver:weakSelf];
     }];
     handle = [pipe fileHandleForReading];
-  
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleOutputFromProcess:) name: NSFileHandleReadCompletionNotification object:handle];
     [task launch];
     [handle readInBackgroundAndNotify];
 }
@@ -114,7 +110,7 @@
         NSData *data = [[notification userInfo] objectForKey:NSFileHandleNotificationDataItem];
         NSString *str;
         str = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-        
+        NSLog(@"%@", str);
         // notify observers
         [[NSNotificationCenter defaultCenter] postNotificationName:OCConsoleOutputNotification object:str];
     }

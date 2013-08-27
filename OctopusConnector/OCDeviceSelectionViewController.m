@@ -42,7 +42,6 @@
 }
 
 - (void)awakeFromNib {
-    NSLog(@"blah %@", [defaults objectForKey:OCKeySelectedDeviceMenuIndex]);
     if ([defaults objectForKey:OCKeySelectedDeviceMenuIndex] == NULL) {
         [deviceSelectionPopupButton selectItemAtIndex:TAB_DEMODEVICE];
         [tabView selectTabViewItemAtIndex:TAB_DEMODEVICE];
@@ -84,6 +83,7 @@
 - (void)ensureComboSelected:(NSComboBox *)comboBox withUserDefault:(NSString *)key {
     if ([defaults objectForKey:key] == NULL && [comboBox indexOfSelectedItem] < 0 && [comboBox numberOfItems] > 0) {
         [comboBox selectItemAtIndex:0];
+        [defaults setValue:[comboBox objectValueOfSelectedItem] forKey:key];
     }
 }
 

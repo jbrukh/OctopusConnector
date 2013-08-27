@@ -29,7 +29,9 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     // subscribe to console data notifications
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleConsoleOutputNotification:) name:OCConsoleOutputNotification object:nil];
+    NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
+    [center addObserver:self selector:@selector(handleConsoleOutputNotification:) name:OCConsoleOutputNotification object:nil];
+    [center addObserver:self selector:@selector(handlePreferencesWillCloseNotification:) name:OCPreferencesWillCloseNotification object:nil];
     
     // ensure there are default settings
     [self ensureDefaults];
@@ -130,6 +132,11 @@
 {
     NSString *data = [notification object];
     [consoleController appendConsole:data];
+}
+
+- (void)handlePreferencesWillCloseNotification:(NSNotification *)notification {
+    [processController stopServer];
+    [processController startServer];
 }
 
 @end
