@@ -31,6 +31,9 @@
     // subscribe to console data notifications
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleConsoleOutputNotification:) name:OCConsoleOutputNotification object:nil];
     
+    // ensure there are default settings
+    [self ensureDefaults];
+    
     // initialize the console, order matters!
     consoleController = [[OCConsoleWindowController alloc] init];
     // this will force the textView to be available for
@@ -45,6 +48,25 @@
     // initialize the process controller
     processController = [[OCProcessController alloc] init];
     [processController startServer];
+}
+
+- (void)ensureDefaults {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    // by default, demo device
+    NSString *device = [defaults valueForKey:OCKeyDevice];
+    if ([device length] <= 0) {
+        [defaults setValue:OCDeviceNameDemoDevice forKey:OCKeyDevice];
+    }
+    
+    // by default, home directory repo
+    NSString *repo = [defaults valueForKey:OCKeyRepo];
+    if ([repo length] <= 0) {
+        NSMutableString *defaultDir = [NSMutableString stringWithString:NSHomeDirectory()];
+        [defaultDir appendString:@"/.octopus"];
+        [defaults setValue:defaultDir forKey:OCKeyRepo];
+    }
+    
 }
 
 - (void)applicationWillTerminate:(NSNotification *)notification

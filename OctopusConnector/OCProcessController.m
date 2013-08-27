@@ -64,22 +64,34 @@
 
 -(NSArray *)getArgs {
     NSMutableArray *result = [NSMutableArray array];
-//    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
-//
-//    if (delegate.mockDevice) {
+    // these have defaults
+    NSString *device = [defaults stringForKey:OCKeyDevice];
+    NSString *repo = [defaults stringForKey:OCKeyRepo];
+    
+    if ([device isEqualToString:OCDeviceNameDemoDevice]) {
         [result addObject:@"--mockDevice"];
-//        NSString* obfFile =[[NSBundle mainBundle] pathForResource:MOCK_FILE ofType:@""];
-//        [result addObject:@"--mockFile"];
-//        [result addObject:obfFile];
-//    } else {
-//        [result addObject:@"--device"];
-//        [result addObject:delegate.deviceName];
-//        [result addObject:@"--port"];
-//        [result addObject:delegate.devicePort];
-//    }
-//    [result addObject:@"--repo"];
-//    [result addObject:delegate.repoPath];
+        NSString* obfFile =[[NSBundle mainBundle] pathForResource:OCDemoDataFile ofType:@""];
+        [result addObject:@"--mockFile"];
+        [result addObject:obfFile];
+    }
+    else if ([device isEqualToString:OCDeviceNameAvatar]) {
+        [result addObject:@"--device"];
+        [result addObject:device];
+        [result addObject:@"--port"];
+        [result addObject:[defaults valueForKey:OCKeyPortAvatar]];
+    }
+    else if ([device isEqualToString:OCDeviceNameThinkgear]) {
+        [result addObject:@"--device"];
+        [result addObject:device];
+        [result addObject:@"--port"];
+        [result addObject:[defaults valueForKey:OCKeyPortThinkgear]];
+    }
+
+    [result addObject:@"--repo"];
+    [result addObject:repo];
+    NSLog(@"QUERY: %@", result);
     return result;
 }
 

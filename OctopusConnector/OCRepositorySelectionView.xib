@@ -209,19 +209,19 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBBindingConnection" key="connection">
-						<string key="label">value: values.octopus__repo</string>
+						<string key="label">value: values.OCKeyRepo</string>
 						<reference key="source" ref="688115892"/>
 						<reference key="destination" ref="59853815"/>
 						<object class="NSNibBindingConnector" key="connector">
 							<reference key="NSSource" ref="688115892"/>
 							<reference key="NSDestination" ref="59853815"/>
-							<string key="NSLabel">value: values.octopus__repo</string>
+							<string key="NSLabel">value: values.OCKeyRepo</string>
 							<string key="NSBinding">value</string>
-							<string key="NSKeyPath">values.octopus__repo</string>
+							<string key="NSKeyPath">values.OCKeyRepo</string>
 							<int key="NSNibBindingConnectorVersion">2</int>
 						</object>
 					</object>
-					<int key="connectionID">103</int>
+					<int key="connectionID">174</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -560,7 +560,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">173</int>
+			<int key="maxID">174</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">

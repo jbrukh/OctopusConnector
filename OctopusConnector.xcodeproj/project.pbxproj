@@ -12,6 +12,8 @@
 		C9526B5617CB005600C854F3 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = C9526B5517CB005600C854F3 /* Constants.m */; };
 		C9526B5D17CB3CCF00C854F3 /* OCProcessController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9526B5C17CB3CCF00C854F3 /* OCProcessController.m */; };
 		C9526B5F17CC275900C854F3 /* octopus in Resources */ = {isa = PBXBuildFile; fileRef = C9526B5E17CC275900C854F3 /* octopus */; };
+		C95919F417CC5CE00004A01A /* 1fabece1-7a57-96ab-3de9-71da8446c52c in Resources */ = {isa = PBXBuildFile; fileRef = C9526B5717CB3B1500C854F3 /* 1fabece1-7a57-96ab-3de9-71da8446c52c */; };
+		C95919F517CC5CE00004A01A /* 6cdc3b4a-2de7-04e0-7211-c6ae23117f1e in Resources */ = {isa = PBXBuildFile; fileRef = C9526B5817CB3B1500C854F3 /* 6cdc3b4a-2de7-04e0-7211-c6ae23117f1e */; };
 		C96CDA9817CC4CCB00772628 /* OCConsoleWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = C96CDA9617CC4CCB00772628 /* OCConsoleWindowController.m */; };
 		C96CDA9917CC4CCB00772628 /* OCConsoleWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = C96CDA9717CC4CCB00772628 /* OCConsoleWindow.xib */; };
 		C9E772BB17CA909300E94EBC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9E772BA17CA909300E94EBC /* Cocoa.framework */; };
@@ -256,6 +258,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C95919F417CC5CE00004A01A /* 1fabece1-7a57-96ab-3de9-71da8446c52c in Resources */,
+				C95919F517CC5CE00004A01A /* 6cdc3b4a-2de7-04e0-7211-c6ae23117f1e in Resources */,
 				C9E772C517CA909300E94EBC /* InfoPlist.strings in Resources */,
 				C9E772CB17CA909300E94EBC /* Credits.rtf in Resources */,
 				C9E772D117CA909300E94EBC /* MainMenu.xib in Resources */,

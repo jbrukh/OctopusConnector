@@ -24,7 +24,6 @@
 
 - (void)setStatusItemUp;
 - (void)setStatusItemDown;
-- (void)appendConsole:(NSString *)str;
 - (IBAction)openPreferences:(id)sender;
 - (IBAction)openWebsite:(id)sender;
 - (IBAction)toggleConsole:(id)sender;
