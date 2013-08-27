@@ -41,7 +41,6 @@
 }
 
 - (void)awakeFromNib {
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSLog(@"%@", [defaults objectForKey:KEY_OCTOPUS__SELECTED_DEVICE_MENU_INDEX]);
     if ([defaults objectForKey:KEY_OCTOPUS__SELECTED_DEVICE_MENU_INDEX] == NULL) {
         [deviceSelectionPopupButton selectItemAtIndex:2];
@@ -74,6 +73,7 @@
     [avatarPortComboBox removeAllItems];
     [avatarPortComboBox addItemsWithObjectValues:ports];
     [self ensureComboSelected:avatarPortComboBox withUserDefault:KEY_OCTOPUS__PORT_AVATAR];
+    
 }
 
 - (void)selectedThinkGearPanel {
@@ -84,7 +84,6 @@
 }
 
 - (void)ensureComboSelected:(NSComboBox *)comboBox withUserDefault:(NSString *)key {
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     if ([[defaults valueForKey:key] length] <= 0 && [comboBox indexOfSelectedItem] < 0 && [comboBox numberOfItems] > 0) {
         [comboBox selectItemAtIndex:0];
     }

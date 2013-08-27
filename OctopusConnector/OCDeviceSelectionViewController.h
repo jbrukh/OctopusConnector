@@ -14,6 +14,7 @@
     IBOutlet NSComboBox *avatarPortComboBox;
     IBOutlet NSComboBox *neuroskyPortComboBox;
     IBOutlet NSPopUpButton *deviceSelectionPopupButton;
+    NSUserDefaults *defaults;
 }
 
 -(IBAction)selectDeviceTab:(id)sender;

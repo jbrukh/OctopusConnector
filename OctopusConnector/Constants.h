@@ -9,9 +9,18 @@
 #ifndef OctopusStatusBar_Constants_h
 #define OctopusStatusBar_Constants_h
 
+/* Constants */
+
 extern NSString *const OCServerBinary;
-extern NSString *const MOCK_FILE;
+extern NSString *const OCDemoDataFile;
 extern NSString *const OCOctopusWebsite;
+
+/* Device Names */
+
+extern NSString *const OCDeviceNameAvatar;
+extern NSString *const OCDeviceNameThinkgear;
+extern NSString *const OCDeviceNameDemoDevice;
+
 
 /* User Defaults Keys */
 
@@ -21,6 +30,7 @@ extern NSString *const KEY_OCTOPUS__PORT_THINKGEAR;
 extern NSString *const KEY_OCTOPUS__SELECTED_DEVICE_MENU_INDEX;
 
 /* Notifications */
+
 extern NSString *const OCConsoleOutputNotification;
 
 #endif
