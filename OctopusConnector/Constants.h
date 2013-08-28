@@ -14,6 +14,7 @@
 extern NSString *const OCServerBinary;
 extern NSString *const OCDemoDataFile;
 extern NSString *const OCOctopusWebsite;
+extern NSString *const OCAppName;
 
 /* Device Names */
 

@@ -157,21 +157,21 @@
     
     if ([device length] <= 0 || [repo length] <= 0) {
         // device or repo is not set
-        NSAlert *alert = [NSAlert alertWithMessageText:@"Alert" defaultButton:@"Ok" alternateButton:nil otherButton:nil informativeTextWithFormat:@"You must select a device and a repository directory."];
+        NSAlert *alert = [NSAlert alertWithMessageText:OCAppName defaultButton:@"Ok" alternateButton:nil otherButton:nil informativeTextWithFormat:@"You must select a device and a repository directory."];
         [alert runModal];
         
         return false;
     }
     
     if ([device isEqualToString:OCDeviceNameAvatar] && [[defaults stringForKey:OCKeyPortAvatar] length] <= 0) {
-        NSAlert *alert = [NSAlert alertWithMessageText:@"Alert" defaultButton:@"Ok" alternateButton:nil otherButton:nil informativeTextWithFormat:@"You must set a port for the Avatar EEG."];
+        NSAlert *alert = [NSAlert alertWithMessageText:OCAppName defaultButton:@"Ok" alternateButton:nil otherButton:nil informativeTextWithFormat:@"You must set a port for the Avatar EEG."];
         [alert runModal];
 
         return false;
     }
     
     if ([device isEqualToString:OCDeviceNameThinkgear] && [[defaults stringForKey:OCKeyPortThinkgear] length] <= 0) {
-        NSAlert *alert = [NSAlert alertWithMessageText:@"Alert" defaultButton:@"Ok" alternateButton:nil otherButton:nil informativeTextWithFormat:@"You must set a port for the ThinkGear device."];
+        NSAlert *alert = [NSAlert alertWithMessageText:OCAppName defaultButton:@"Ok" alternateButton:nil otherButton:nil informativeTextWithFormat:@"You must set a port for the ThinkGear device."];
         [alert runModal];
 
         return false;
