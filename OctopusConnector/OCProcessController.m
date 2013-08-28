@@ -49,7 +49,7 @@
         // TODO: send notification here with exit code
         [weakDelegate setStatusItemDown];
         int rc = [localTask terminationStatus];
-        printf("EXIT CODE %d", rc);
+        [[NSNotificationCenter defaultCenter] postNotificationName:OCProcessExitedNotification object:[NSNumber numberWithInt:rc]];
         [[NSNotificationCenter defaultCenter] removeObserver:weakSelf];
     }];
     handle = [pipe fileHandleForReading];

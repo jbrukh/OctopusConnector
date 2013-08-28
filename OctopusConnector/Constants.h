@@ -36,5 +36,6 @@ extern NSString *const OCKeySelectedDeviceTabIndex;
 
 extern NSString *const OCConsoleOutputNotification;
 extern NSString *const OCPreferencesWillCloseNotification;
+extern NSString *const OCProcessExitedNotification;
 
 #endif

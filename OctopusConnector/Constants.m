@@ -34,3 +34,4 @@ NSString *const OCKeySelectedDeviceTabIndex                 = @"OCKeySelectedDev
 
 NSString *const OCConsoleOutputNotification                 = @"OCConsoleOutputNotification";
 NSString *const OCPreferencesWillCloseNotification          = @"OCPreferencesWillCloseNotification";
+NSString *const OCProcessExitedNotification                 = @"OCProcessExitedNotification";

@@ -32,6 +32,7 @@
     NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
     [center addObserver:self selector:@selector(handleConsoleOutputNotification:) name:OCConsoleOutputNotification object:nil];
     [center addObserver:self selector:@selector(handlePreferencesWillCloseNotification:) name:OCPreferencesWillCloseNotification object:nil];
+    [center addObserver:self selector:@selector(handleProcessExitedNotification:) name:OCProcessExitedNotification object:nil];
     
     // ensure there are default settings
     [self ensureDefaults];
@@ -147,6 +148,11 @@
         [processController stopServer];
         [processController startServer];
     }
+}
+
+- (void)handleProcessExitedNotification:(NSNotification *)notification {
+    NSAlert *alert = [NSAlert alertWithMessageText:OCAppName defaultButton:@"Ok" alternateButton:nil otherButton:nil informativeTextWithFormat:@"The server process has terminated. Correct the problem and restart Octopus."];
+    [alert runModal];
 }
 
 -(BOOL)validateDefaults {
