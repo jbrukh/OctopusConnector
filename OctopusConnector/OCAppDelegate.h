@@ -9,7 +9,7 @@
 #import <Cocoa/Cocoa.h>
 #import "OCProcessController.h"
 #import "OCConsoleWindowController.h"
-//#import "OCAboutWindowController.h"
+#import "OCAboutWindowController.h"
 
 @interface OCAppDelegate : NSObject <NSApplicationDelegate> {
     NSWindowController *_preferencesWindowController;
@@ -17,7 +17,7 @@
     IBOutlet NSMenu *statusMenu;
     OCProcessController *processController;
     OCConsoleWindowController *consoleController;
-    //OCAboutWindowController *aboutWindowController;
+    OCAboutWindowController *aboutWindowController;
 }
 
 @property (assign) IBOutlet NSWindow *window;

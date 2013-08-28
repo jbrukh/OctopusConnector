@@ -18,6 +18,8 @@
 		C9651CBA17CDA4D70064F1AC /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9651CB917CDA4D70064F1AC /* Sparkle.framework */; };
 		C9651CBC17CDA52A0064F1AC /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C9651CB917CDA4D70064F1AC /* Sparkle.framework */; };
 		C9651CBE17CDA5A90064F1AC /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = C9651CBD17CDA5A90064F1AC /* dsa_pub.pem */; };
+		C9651CC217CDA7430064F1AC /* OCAboutWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9651CC017CDA7430064F1AC /* OCAboutWindowController.m */; };
+		C9651CC317CDA7430064F1AC /* OCAboutWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9651CC117CDA7430064F1AC /* OCAboutWindow.xib */; };
 		C96CDA9817CC4CCB00772628 /* OCConsoleWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = C96CDA9617CC4CCB00772628 /* OCConsoleWindowController.m */; };
 		C96CDA9917CC4CCB00772628 /* OCConsoleWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = C96CDA9717CC4CCB00772628 /* OCConsoleWindow.xib */; };
 		C9E772BB17CA909300E94EBC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9E772BA17CA909300E94EBC /* Cocoa.framework */; };
@@ -63,6 +65,9 @@
 		C9651CB417CD9C110064F1AC /* icon_big.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_big.png; sourceTree = "<group>"; };
 		C9651CB917CDA4D70064F1AC /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		C9651CBD17CDA5A90064F1AC /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
+		C9651CBF17CDA7430064F1AC /* OCAboutWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCAboutWindowController.h; sourceTree = "<group>"; };
+		C9651CC017CDA7430064F1AC /* OCAboutWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCAboutWindowController.m; sourceTree = "<group>"; };
+		C9651CC117CDA7430064F1AC /* OCAboutWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OCAboutWindow.xib; sourceTree = "<group>"; };
 		C96CDA9517CC4CCB00772628 /* OCConsoleWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCConsoleWindowController.h; sourceTree = "<group>"; };
 		C96CDA9617CC4CCB00772628 /* OCConsoleWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCConsoleWindowController.m; sourceTree = "<group>"; };
 		C96CDA9717CC4CCB00772628 /* OCConsoleWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OCConsoleWindow.xib; sourceTree = "<group>"; };
@@ -121,6 +126,9 @@
 				C96CDA9517CC4CCB00772628 /* OCConsoleWindowController.h */,
 				C96CDA9617CC4CCB00772628 /* OCConsoleWindowController.m */,
 				C96CDA9717CC4CCB00772628 /* OCConsoleWindow.xib */,
+				C9651CBF17CDA7430064F1AC /* OCAboutWindowController.h */,
+				C9651CC017CDA7430064F1AC /* OCAboutWindowController.m */,
+				C9651CC117CDA7430064F1AC /* OCAboutWindow.xib */,
 			);
 			name = Windows;
 			sourceTree = "<group>";
@@ -306,6 +314,7 @@
 				C96CDA9917CC4CCB00772628 /* OCConsoleWindow.xib in Resources */,
 				C9651CB517CD9C110064F1AC /* icon_big.png in Resources */,
 				C9651CBE17CDA5A90064F1AC /* dsa_pub.pem in Resources */,
+				C9651CC317CDA7430064F1AC /* OCAboutWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +333,7 @@
 				C9526B5617CB005600C854F3 /* Constants.m in Sources */,
 				C9526B5D17CB3CCF00C854F3 /* OCProcessController.m in Sources */,
 				C96CDA9817CC4CCB00772628 /* OCConsoleWindowController.m in Sources */,
+				C9651CC217CDA7430064F1AC /* OCAboutWindowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

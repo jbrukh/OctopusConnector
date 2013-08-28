@@ -51,7 +51,7 @@
     processController = [[OCProcessController alloc] init];
     [processController startServer];
     
-    //aboutWindowController = [[OCAboutWindowController alloc] init];
+    aboutWindowController = [[OCAboutWindowController alloc] initWithWindowNibName:@"OCAboutWindow"];
 }
 
 - (void)ensureDefaults {
@@ -116,11 +116,10 @@
 }
 
 - (IBAction)openAboutWindow:(id)sender  {
-//    NSLog(@"I am here");
-//    [NSApp activateIgnoringOtherApps:YES];
-//    [aboutWindowController.window makeKeyWindow];
-//    [aboutWindowController.window setIsVisible:YES];
-//    [aboutWindowController.window setOrderedIndex:0];
+    [NSApp activateIgnoringOtherApps:YES];
+    [aboutWindowController.window makeKeyWindow];
+    [aboutWindowController.window setIsVisible:YES];
+    [aboutWindowController.window setOrderedIndex:0];
 }
 
 #pragma mark - Methods
