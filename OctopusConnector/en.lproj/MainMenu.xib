@@ -63,9 +63,9 @@
 						<reference key="NSOnImage" ref="837203395"/>
 						<reference key="NSMixedImage" ref="993199194"/>
 					</object>
-					<object class="NSMenuItem" id="846934746">
+					<object class="NSMenuItem" id="316976668">
 						<reference key="NSMenu" ref="249264890"/>
-						<string key="NSTitle">Check for Updates...</string>
+						<string key="NSTitle">Show Console</string>
 						<string key="NSKeyEquiv"/>
 						<int key="NSMnemonicLoc">2147483647</int>
 						<reference key="NSOnImage" ref="837203395"/>
@@ -81,9 +81,17 @@
 						<reference key="NSOnImage" ref="837203395"/>
 						<reference key="NSMixedImage" ref="993199194"/>
 					</object>
-					<object class="NSMenuItem" id="316976668">
+					<object class="NSMenuItem" id="846934746">
 						<reference key="NSMenu" ref="249264890"/>
-						<string key="NSTitle">Show Console</string>
+						<string key="NSTitle">Check for Updates...</string>
+						<string key="NSKeyEquiv"/>
+						<int key="NSMnemonicLoc">2147483647</int>
+						<reference key="NSOnImage" ref="837203395"/>
+						<reference key="NSMixedImage" ref="993199194"/>
+					</object>
+					<object class="NSMenuItem" id="751519246">
+						<reference key="NSMenu" ref="249264890"/>
+						<string key="NSTitle">About</string>
 						<string key="NSKeyEquiv"/>
 						<int key="NSMnemonicLoc">2147483647</int>
 						<reference key="NSOnImage" ref="837203395"/>
@@ -160,6 +168,14 @@
 					</object>
 					<int key="connectionID">579</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">openAboutWindow:</string>
+						<reference key="source" ref="976324537"/>
+						<reference key="destination" ref="751519246"/>
+					</object>
+					<int key="connectionID">584</int>
+				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<array key="orderedObjects">
@@ -201,13 +217,14 @@
 						<int key="objectID">563</int>
 						<reference key="object" ref="249264890"/>
 						<array class="NSMutableArray" key="children">
-							<reference ref="316976668"/>
 							<reference ref="553562984"/>
 							<reference ref="914072445"/>
-							<reference ref="846934746"/>
 							<reference ref="594420135"/>
 							<reference ref="879046020"/>
+							<reference ref="316976668"/>
+							<reference ref="846934746"/>
 							<reference ref="892827420"/>
+							<reference ref="751519246"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -246,6 +263,11 @@
 						<reference key="object" ref="892827420"/>
 						<reference key="parent" ref="249264890"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">580</int>
+						<reference key="object" ref="751519246"/>
+						<reference key="parent" ref="249264890"/>
+					</object>
 				</array>
 			</object>
 			<dictionary class="NSMutableDictionary" key="flattenedProperties">
@@ -262,12 +284,13 @@
 				<string key="568.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="570.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="573.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<string key="580.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 			</dictionary>
 			<dictionary class="NSMutableDictionary" key="unlocalizedProperties"/>
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">579</int>
+			<int key="maxID">584</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -275,11 +298,16 @@
 					<string key="className">OCAppDelegate</string>
 					<string key="superclassName">NSObject</string>
 					<dictionary class="NSMutableDictionary" key="actions">
+						<string key="openAboutWindow:">id</string>
 						<string key="openPreferences:">id</string>
 						<string key="openWebsite:">id</string>
 						<string key="toggleConsole:">id</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="actionInfosByName">
+						<object class="IBActionInfo" key="openAboutWindow:">
+							<string key="name">openAboutWindow:</string>
+							<string key="candidateClassName">id</string>
+						</object>
 						<object class="IBActionInfo" key="openPreferences:">
 							<string key="name">openPreferences:</string>
 							<string key="candidateClassName">id</string>

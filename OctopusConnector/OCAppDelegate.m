@@ -50,6 +50,8 @@
     // initialize the process controller
     processController = [[OCProcessController alloc] init];
     [processController startServer];
+    
+    //aboutWindowController = [[OCAboutWindowController alloc] init];
 }
 
 - (void)ensureDefaults {
@@ -111,6 +113,14 @@
     [consoleController.window makeKeyWindow];
     [consoleController.window setIsVisible:YES];
     [consoleController.window setOrderedIndex:0];
+}
+
+- (IBAction)openAboutWindow:(id)sender  {
+//    NSLog(@"I am here");
+//    [NSApp activateIgnoringOtherApps:YES];
+//    [aboutWindowController.window makeKeyWindow];
+//    [aboutWindowController.window setIsVisible:YES];
+//    [aboutWindowController.window setOrderedIndex:0];
 }
 
 #pragma mark - Methods
