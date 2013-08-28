@@ -107,13 +107,10 @@
 }
 
 - (IBAction)toggleConsole:(id)sender {
-    if (![consoleController.window isVisible]
-        || ![consoleController.window isKeyWindow]) {
-        [consoleController.window setIsVisible:YES];
-        [NSApp activateIgnoringOtherApps:YES];
-    } else {
-        [consoleController.window setIsVisible:NO];
-    }
+    [NSApp activateIgnoringOtherApps:YES];
+    [consoleController.window makeKeyWindow];
+    [consoleController.window setIsVisible:YES];
+    [consoleController.window setOrderedIndex:0];
 }
 
 #pragma mark - Methods

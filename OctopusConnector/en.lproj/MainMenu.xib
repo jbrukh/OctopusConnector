@@ -83,7 +83,7 @@
 					</object>
 					<object class="NSMenuItem" id="316976668">
 						<reference key="NSMenu" ref="249264890"/>
-						<string key="NSTitle">Toggle Console</string>
+						<string key="NSTitle">Show Console</string>
 						<string key="NSKeyEquiv"/>
 						<int key="NSMnemonicLoc">2147483647</int>
 						<reference key="NSOnImage" ref="837203395"/>
