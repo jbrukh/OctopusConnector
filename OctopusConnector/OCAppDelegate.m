@@ -46,12 +46,14 @@
     NSString *version =[[[NSBundle mainBundle] infoDictionary] valueForKey:@"CFBundleVersion"];
     NSString *fullVersion = [@"Mac Release " stringByAppendingFormat:@"%@\n\n", version];
     [consoleController appendConsole:fullVersion];
+    aboutWindowController = [[OCAboutWindowController alloc] initWithWindowNibName:@"OCAboutWindow"];
+
     
     // initialize the process controller
     processController = [[OCProcessController alloc] init];
-    [processController startServer];
-    
-    aboutWindowController = [[OCAboutWindowController alloc] initWithWindowNibName:@"OCAboutWindow"];
+    if ([self validateDefaults]) {
+        [processController startServer];
+    }
 }
 
 - (void)ensureDefaults {
@@ -141,8 +143,40 @@
 }
 
 - (void)handlePreferencesWillCloseNotification:(NSNotification *)notification {
-    [processController stopServer];
-    [processController startServer];
+    if ([self validateDefaults]) {
+        [processController stopServer];
+        [processController startServer];
+    }
+}
+
+-(BOOL)validateDefaults {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    NSString *device = [defaults stringForKey:OCKeyDevice];
+    NSString *repo = [defaults stringForKey:OCKeyRepo];
+    
+    if ([device length] <= 0 || [repo length] <= 0) {
+        // device or repo is not set
+        NSAlert *alert = [NSAlert alertWithMessageText:@"Alert" defaultButton:@"Ok" alternateButton:nil otherButton:nil informativeTextWithFormat:@"You must select a device and a repository directory."];
+        [alert runModal];
+        
+        return false;
+    }
+    
+    if ([device isEqualToString:OCDeviceNameAvatar] && [[defaults stringForKey:OCKeyPortAvatar] length] <= 0) {
+        NSAlert *alert = [NSAlert alertWithMessageText:@"Alert" defaultButton:@"Ok" alternateButton:nil otherButton:nil informativeTextWithFormat:@"You must set a port for the Avatar EEG."];
+        [alert runModal];
+
+        return false;
+    }
+    
+    if ([device isEqualToString:OCDeviceNameThinkgear] && [[defaults stringForKey:OCKeyPortThinkgear] length] <= 0) {
+        NSAlert *alert = [NSAlert alertWithMessageText:@"Alert" defaultButton:@"Ok" alternateButton:nil otherButton:nil informativeTextWithFormat:@"You must set a port for the ThinkGear device."];
+        [alert runModal];
+
+        return false;
+    }
+    return true;
 }
 
 @end
