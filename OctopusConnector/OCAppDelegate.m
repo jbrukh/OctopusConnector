@@ -153,6 +153,7 @@
 - (void)handleProcessExitedNotification:(NSNotification *)notification {
     NSAlert *alert = [NSAlert alertWithMessageText:OCAppName defaultButton:@"Ok" alternateButton:nil otherButton:nil informativeTextWithFormat:@"The server process has terminated. Correct the problem and restart Octopus."];
     [alert runModal];
+    [self toggleConsole:nil];
 }
 
 -(BOOL)validateDefaults {
