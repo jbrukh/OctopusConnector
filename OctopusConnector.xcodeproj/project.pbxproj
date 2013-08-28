@@ -15,6 +15,9 @@
 		C95919F417CC5CE00004A01A /* 1fabece1-7a57-96ab-3de9-71da8446c52c in Resources */ = {isa = PBXBuildFile; fileRef = C9526B5717CB3B1500C854F3 /* 1fabece1-7a57-96ab-3de9-71da8446c52c */; };
 		C95919F517CC5CE00004A01A /* 6cdc3b4a-2de7-04e0-7211-c6ae23117f1e in Resources */ = {isa = PBXBuildFile; fileRef = C9526B5817CB3B1500C854F3 /* 6cdc3b4a-2de7-04e0-7211-c6ae23117f1e */; };
 		C9651CB517CD9C110064F1AC /* icon_big.png in Resources */ = {isa = PBXBuildFile; fileRef = C9651CB417CD9C110064F1AC /* icon_big.png */; };
+		C9651CBA17CDA4D70064F1AC /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9651CB917CDA4D70064F1AC /* Sparkle.framework */; };
+		C9651CBC17CDA52A0064F1AC /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C9651CB917CDA4D70064F1AC /* Sparkle.framework */; };
+		C9651CBE17CDA5A90064F1AC /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = C9651CBD17CDA5A90064F1AC /* dsa_pub.pem */; };
 		C96CDA9817CC4CCB00772628 /* OCConsoleWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = C96CDA9617CC4CCB00772628 /* OCConsoleWindowController.m */; };
 		C96CDA9917CC4CCB00772628 /* OCConsoleWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = C96CDA9717CC4CCB00772628 /* OCConsoleWindow.xib */; };
 		C9E772BB17CA909300E94EBC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9E772BA17CA909300E94EBC /* Cocoa.framework */; };
@@ -32,6 +35,19 @@
 		C9E772FE17CAA05800E94EBC /* OCDeviceSelectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9E772FC17CAA05800E94EBC /* OCDeviceSelectionView.xib */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		C9651CBB17CDA51A0064F1AC /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C9651CBC17CDA52A0064F1AC /* Sparkle.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		C9526B4B17CAAE8D00C854F3 /* MASPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MASPreferencesViewController.h; path = MASPreferences/MASPreferencesViewController.h; sourceTree = "<group>"; };
 		C9526B4C17CAAE8D00C854F3 /* MASPreferencesWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MASPreferencesWindow.xib; path = MASPreferences/MASPreferencesWindow.xib; sourceTree = "<group>"; };
@@ -45,6 +61,8 @@
 		C9526B5C17CB3CCF00C854F3 /* OCProcessController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCProcessController.m; sourceTree = "<group>"; };
 		C9526B5E17CC275900C854F3 /* octopus */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = octopus; sourceTree = "<group>"; };
 		C9651CB417CD9C110064F1AC /* icon_big.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_big.png; sourceTree = "<group>"; };
+		C9651CB917CDA4D70064F1AC /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
+		C9651CBD17CDA5A90064F1AC /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
 		C96CDA9517CC4CCB00772628 /* OCConsoleWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCConsoleWindowController.h; sourceTree = "<group>"; };
 		C96CDA9617CC4CCB00772628 /* OCConsoleWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCConsoleWindowController.m; sourceTree = "<group>"; };
 		C96CDA9717CC4CCB00772628 /* OCConsoleWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OCConsoleWindow.xib; sourceTree = "<group>"; };
@@ -79,6 +97,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9E772BB17CA909300E94EBC /* Cocoa.framework in Frameworks */,
+				C9651CBA17CDA4D70064F1AC /* Sparkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +123,14 @@
 				C96CDA9717CC4CCB00772628 /* OCConsoleWindow.xib */,
 			);
 			name = Windows;
+			sourceTree = "<group>";
+		};
+		C9651CB617CDA3480064F1AC /* Keys */ = {
+			isa = PBXGroup;
+			children = (
+				C9651CBD17CDA5A90064F1AC /* dsa_pub.pem */,
+			);
+			name = Keys;
 			sourceTree = "<group>";
 		};
 		C9E772AE17CA909300E94EBC = {
@@ -147,15 +174,16 @@
 			isa = PBXGroup;
 			children = (
 				C9526B6017CC3CF100C854F3 /* Windows */,
+				C9E772E517CA97F800E94EBC /* Preferences */,
+				C9651CB917CDA4D70064F1AC /* Sparkle.framework */,
 				C9526B5B17CB3CCF00C854F3 /* OCProcessController.h */,
 				C9526B5C17CB3CCF00C854F3 /* OCProcessController.m */,
 				C9526B5417CB005600C854F3 /* Constants.h */,
 				C9526B5517CB005600C854F3 /* Constants.m */,
-				C9526B4817CAAE7300C854F3 /* MASPreferences */,
-				C9E772E517CA97F800E94EBC /* Preferences */,
 				C9E772CC17CA909300E94EBC /* OCAppDelegate.h */,
 				C9E772CD17CA909300E94EBC /* OCAppDelegate.m */,
 				C9E772CF17CA909300E94EBC /* MainMenu.xib */,
+				C9526B4817CAAE7300C854F3 /* MASPreferences */,
 				C9E772C117CA909300E94EBC /* Supporting Files */,
 			);
 			path = OctopusConnector;
@@ -164,6 +192,7 @@
 		C9E772C117CA909300E94EBC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C9651CB617CDA3480064F1AC /* Keys */,
 				C9E772F917CA9D7100E94EBC /* Binaries */,
 				C9E772F817CA9D5D00E94EBC /* Images */,
 				C9E772C217CA909300E94EBC /* OctopusConnector-Info.plist */,
@@ -219,6 +248,7 @@
 				C9E772B317CA909300E94EBC /* Sources */,
 				C9E772B417CA909300E94EBC /* Frameworks */,
 				C9E772B517CA909300E94EBC /* Resources */,
+				C9651CBB17CDA51A0064F1AC /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -275,6 +305,7 @@
 				C9526B5F17CC275900C854F3 /* octopus in Resources */,
 				C96CDA9917CC4CCB00772628 /* OCConsoleWindow.xib in Resources */,
 				C9651CB517CD9C110064F1AC /* icon_big.png in Resources */,
+				C9651CBE17CDA5A90064F1AC /* dsa_pub.pem in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,6 +421,10 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/OctopusConnector\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OctopusConnector/OctopusConnector-Prefix.pch";
 				INFOPLIST_FILE = "OctopusConnector/OctopusConnector-Info.plist";
@@ -404,6 +439,10 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/OctopusConnector\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OctopusConnector/OctopusConnector-Prefix.pch";
 				INFOPLIST_FILE = "OctopusConnector/OctopusConnector-Info.plist";
