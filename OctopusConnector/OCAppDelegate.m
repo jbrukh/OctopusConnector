@@ -47,8 +47,10 @@
     NSString *version =[[[NSBundle mainBundle] infoDictionary] valueForKey:@"CFBundleVersion"];
     NSString *fullVersion = [@"Mac Release " stringByAppendingFormat:@"%@\n\n", version];
     [consoleController appendConsole:fullVersion];
+    
+    
     aboutWindowController = [[OCAboutWindowController alloc] initWithWindowNibName:@"OCAboutWindow"];
-
+    diagnosticsWindowController = [[OCDiagnosticsWindowController alloc] initWithWindowNibName:@"OCDiagnosticsWindow"];
     
     // initialize the process controller
     processController = [[OCProcessController alloc] init];
@@ -153,12 +155,11 @@
 - (void)handleProcessExitedNotification:(NSNotification *)notification {
     long rc = [[notification object] integerValue];
     NSLog(@"Termination code: %@", [NSNumber numberWithLong:rc]);
-    if( rc == 0) {
-        return;
+    if( rc != 0) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [diagnosticsWindowController showWindow:nil];
+        });
     }
-    NSAlert *alert = [NSAlert alertWithMessageText:OCAppName defaultButton:@"Ok" alternateButton:nil otherButton:nil informativeTextWithFormat:@"The server process has terminated. Correct the problem and restart Octopus."];
-    [alert runModal];
-    [self toggleConsole:nil];
 }
 
 -(BOOL)validateDefaults {

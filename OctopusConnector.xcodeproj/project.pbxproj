@@ -20,6 +20,9 @@
 		C9651CC217CDA7430064F1AC /* OCAboutWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9651CC017CDA7430064F1AC /* OCAboutWindowController.m */; };
 		C9651CC317CDA7430064F1AC /* OCAboutWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9651CC117CDA7430064F1AC /* OCAboutWindow.xib */; };
 		C9651CD117CF0E4F0064F1AC /* octopus in Resources */ = {isa = PBXBuildFile; fileRef = C9651CD017CF0E4F0064F1AC /* octopus */; };
+		C9651CD517CF0F960064F1AC /* alert_5-20110809115913-00019.png in Resources */ = {isa = PBXBuildFile; fileRef = C9651CD417CF0F960064F1AC /* alert_5-20110809115913-00019.png */; };
+		C9651CD917CF0FCE0064F1AC /* OCDiagnosticsWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9651CD717CF0FCE0064F1AC /* OCDiagnosticsWindowController.m */; };
+		C9651CDA17CF0FCE0064F1AC /* OCDiagnosticsWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9651CD817CF0FCE0064F1AC /* OCDiagnosticsWindow.xib */; };
 		C96CDA9817CC4CCB00772628 /* OCConsoleWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = C96CDA9617CC4CCB00772628 /* OCConsoleWindowController.m */; };
 		C96CDA9917CC4CCB00772628 /* OCConsoleWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = C96CDA9717CC4CCB00772628 /* OCConsoleWindow.xib */; };
 		C9E772BB17CA909300E94EBC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9E772BA17CA909300E94EBC /* Cocoa.framework */; };
@@ -68,6 +71,10 @@
 		C9651CC017CDA7430064F1AC /* OCAboutWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCAboutWindowController.m; sourceTree = "<group>"; };
 		C9651CC117CDA7430064F1AC /* OCAboutWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OCAboutWindow.xib; sourceTree = "<group>"; };
 		C9651CD017CF0E4F0064F1AC /* octopus */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = octopus; sourceTree = "<group>"; };
+		C9651CD417CF0F960064F1AC /* alert_5-20110809115913-00019.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "alert_5-20110809115913-00019.png"; sourceTree = "<group>"; };
+		C9651CD617CF0FCE0064F1AC /* OCDiagnosticsWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCDiagnosticsWindowController.h; sourceTree = "<group>"; };
+		C9651CD717CF0FCE0064F1AC /* OCDiagnosticsWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCDiagnosticsWindowController.m; sourceTree = "<group>"; };
+		C9651CD817CF0FCE0064F1AC /* OCDiagnosticsWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OCDiagnosticsWindow.xib; sourceTree = "<group>"; };
 		C96CDA9517CC4CCB00772628 /* OCConsoleWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCConsoleWindowController.h; sourceTree = "<group>"; };
 		C96CDA9617CC4CCB00772628 /* OCConsoleWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCConsoleWindowController.m; sourceTree = "<group>"; };
 		C96CDA9717CC4CCB00772628 /* OCConsoleWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OCConsoleWindow.xib; sourceTree = "<group>"; };
@@ -129,6 +136,9 @@
 				C9651CBF17CDA7430064F1AC /* OCAboutWindowController.h */,
 				C9651CC017CDA7430064F1AC /* OCAboutWindowController.m */,
 				C9651CC117CDA7430064F1AC /* OCAboutWindow.xib */,
+				C9651CD617CF0FCE0064F1AC /* OCDiagnosticsWindowController.h */,
+				C9651CD717CF0FCE0064F1AC /* OCDiagnosticsWindowController.m */,
+				C9651CD817CF0FCE0064F1AC /* OCDiagnosticsWindow.xib */,
 			);
 			name = Windows;
 			sourceTree = "<group>";
@@ -228,6 +238,7 @@
 		C9E772F817CA9D5D00E94EBC /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				C9651CD417CF0F960064F1AC /* alert_5-20110809115913-00019.png */,
 				C9651CB417CD9C110064F1AC /* icon_big.png */,
 				C9E772F217CA9D0100E94EBC /* icon_down.png */,
 				C9E772F317CA9D0100E94EBC /* icon_up.png */,
@@ -315,6 +326,8 @@
 				C9651CBE17CDA5A90064F1AC /* dsa_pub.pem in Resources */,
 				C9651CC317CDA7430064F1AC /* OCAboutWindow.xib in Resources */,
 				C9651CD117CF0E4F0064F1AC /* octopus in Resources */,
+				C9651CD517CF0F960064F1AC /* alert_5-20110809115913-00019.png in Resources */,
+				C9651CDA17CF0FCE0064F1AC /* OCDiagnosticsWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +347,7 @@
 				C9526B5D17CB3CCF00C854F3 /* OCProcessController.m in Sources */,
 				C96CDA9817CC4CCB00772628 /* OCConsoleWindowController.m in Sources */,
 				C9651CC217CDA7430064F1AC /* OCAboutWindowController.m in Sources */,
+				C9651CD917CF0FCE0064F1AC /* OCDiagnosticsWindowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

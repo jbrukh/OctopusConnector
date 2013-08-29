@@ -10,6 +10,7 @@
 #import "OCProcessController.h"
 #import "OCConsoleWindowController.h"
 #import "OCAboutWindowController.h"
+#import "OCDiagnosticsWindowController.h"
 
 @interface OCAppDelegate : NSObject <NSApplicationDelegate> {
     NSWindowController *_preferencesWindowController;
@@ -18,6 +19,7 @@
     OCProcessController *processController;
     OCConsoleWindowController *consoleController;
     OCAboutWindowController *aboutWindowController;
+    OCDiagnosticsWindowController *diagnosticsWindowController;
 }
 
 @property (assign) IBOutlet NSWindow *window;
@@ -30,6 +32,5 @@
 - (IBAction)openWebsite:(id)sender;
 - (IBAction)toggleConsole:(id)sender;
 - (IBAction)openAboutWindow:(id)sender;
-
 
 @end
