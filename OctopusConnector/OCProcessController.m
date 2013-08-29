@@ -97,7 +97,7 @@
 {
     NSLog(@"Stopping Octopus Server.");
     if (task != NULL && [task isRunning]) {
-        [task terminate];
+        [task interrupt];
         [task waitUntilExit];
         [delegate setStatusItemDown];
     }

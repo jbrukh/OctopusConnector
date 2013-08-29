@@ -55,14 +55,6 @@
 							<string key="NSResourceName">NSMenuMixedState</string>
 						</object>
 					</object>
-					<object class="NSMenuItem" id="879046020">
-						<reference key="NSMenu" ref="249264890"/>
-						<string key="NSTitle">Open Octopus...</string>
-						<string key="NSKeyEquiv"/>
-						<int key="NSMnemonicLoc">2147483647</int>
-						<reference key="NSOnImage" ref="837203395"/>
-						<reference key="NSMixedImage" ref="993199194"/>
-					</object>
 					<object class="NSMenuItem" id="316976668">
 						<reference key="NSMenu" ref="249264890"/>
 						<string key="NSTitle">Show Console</string>
@@ -72,6 +64,24 @@
 						<reference key="NSMixedImage" ref="993199194"/>
 					</object>
 					<object class="NSMenuItem" id="594420135">
+						<reference key="NSMenu" ref="249264890"/>
+						<bool key="NSIsDisabled">YES</bool>
+						<bool key="NSIsSeparator">YES</bool>
+						<string key="NSTitle"/>
+						<string key="NSKeyEquiv"/>
+						<int key="NSMnemonicLoc">2147483647</int>
+						<reference key="NSOnImage" ref="837203395"/>
+						<reference key="NSMixedImage" ref="993199194"/>
+					</object>
+					<object class="NSMenuItem" id="818017051">
+						<reference key="NSMenu" ref="249264890"/>
+						<string key="NSTitle">Open Octopus Beta...</string>
+						<string key="NSKeyEquiv"/>
+						<int key="NSMnemonicLoc">2147483647</int>
+						<reference key="NSOnImage" ref="837203395"/>
+						<reference key="NSMixedImage" ref="993199194"/>
+					</object>
+					<object class="NSMenuItem" id="589298119">
 						<reference key="NSMenu" ref="249264890"/>
 						<bool key="NSIsDisabled">YES</bool>
 						<bool key="NSIsSeparator">YES</bool>
@@ -157,14 +167,6 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
-						<string key="label">openWebsite:</string>
-						<reference key="source" ref="976324537"/>
-						<reference key="destination" ref="879046020"/>
-					</object>
-					<int key="connectionID">577</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBActionConnection" key="connection">
 						<string key="label">toggleConsole:</string>
 						<reference key="source" ref="976324537"/>
 						<reference key="destination" ref="316976668"/>
@@ -178,6 +180,14 @@
 						<reference key="destination" ref="751519246"/>
 					</object>
 					<int key="connectionID">584</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">openWebsite:</string>
+						<reference key="source" ref="976324537"/>
+						<reference key="destination" ref="818017051"/>
+					</object>
+					<int key="connectionID">813</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
@@ -231,11 +241,12 @@
 							<reference ref="553562984"/>
 							<reference ref="914072445"/>
 							<reference ref="594420135"/>
-							<reference ref="879046020"/>
 							<reference ref="316976668"/>
 							<reference ref="846934746"/>
 							<reference ref="892827420"/>
 							<reference ref="751519246"/>
+							<reference ref="589298119"/>
+							<reference ref="818017051"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -265,11 +276,6 @@
 						<reference key="parent" ref="249264890"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">570</int>
-						<reference key="object" ref="879046020"/>
-						<reference key="parent" ref="249264890"/>
-					</object>
-					<object class="IBObjectRecord">
 						<int key="objectID">573</int>
 						<reference key="object" ref="892827420"/>
 						<reference key="parent" ref="249264890"/>
@@ -283,6 +289,16 @@
 						<int key="objectID">585</int>
 						<reference key="object" ref="49234457"/>
 						<reference key="parent" ref="0"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">587</int>
+						<reference key="object" ref="589298119"/>
+						<reference key="parent" ref="249264890"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">812</int>
+						<reference key="object" ref="818017051"/>
+						<reference key="parent" ref="249264890"/>
 					</object>
 				</array>
 			</object>
@@ -298,16 +314,17 @@
 				<string key="566.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="567.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="568.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
-				<string key="570.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="573.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="580.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="585.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<string key="587.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<string key="812.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 			</dictionary>
 			<dictionary class="NSMutableDictionary" key="unlocalizedProperties"/>
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">586</int>
+			<int key="maxID">813</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">

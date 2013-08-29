@@ -9,6 +9,6 @@
 #import <Cocoa/Cocoa.h>
 
 @interface OCAboutWindowController : NSWindowController
-@property (weak) IBOutlet NSTextField *title;
+@property (retain) IBOutlet NSTextField *title;
 
 @end

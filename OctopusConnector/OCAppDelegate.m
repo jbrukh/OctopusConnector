@@ -151,6 +151,11 @@
 }
 
 - (void)handleProcessExitedNotification:(NSNotification *)notification {
+    long rc = [[notification object] integerValue];
+    NSLog(@"Termination code: %@", [NSNumber numberWithLong:rc]);
+    if( rc == 0) {
+        return;
+    }
     NSAlert *alert = [NSAlert alertWithMessageText:OCAppName defaultButton:@"Ok" alternateButton:nil otherButton:nil informativeTextWithFormat:@"The server process has terminated. Correct the problem and restart Octopus."];
     [alert runModal];
     [self toggleConsole:nil];
