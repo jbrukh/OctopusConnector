@@ -32,5 +32,6 @@
 - (IBAction)openWebsite:(id)sender;
 - (IBAction)toggleConsole:(id)sender;
 - (IBAction)openAboutWindow:(id)sender;
+- (IBAction)restart:(id)sender;
 
 @end

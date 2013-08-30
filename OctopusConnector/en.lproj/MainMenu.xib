@@ -58,7 +58,8 @@
 					<object class="NSMenuItem" id="316976668">
 						<reference key="NSMenu" ref="249264890"/>
 						<string key="NSTitle">Show Console</string>
-						<string key="NSKeyEquiv"/>
+						<string key="NSKeyEquiv">c</string>
+						<int key="NSKeyEquivModMask">1048576</int>
 						<int key="NSMnemonicLoc">2147483647</int>
 						<reference key="NSOnImage" ref="837203395"/>
 						<reference key="NSMixedImage" ref="993199194"/>
@@ -73,7 +74,7 @@
 						<reference key="NSOnImage" ref="837203395"/>
 						<reference key="NSMixedImage" ref="993199194"/>
 					</object>
-					<object class="NSMenuItem" id="818017051">
+					<object class="NSMenuItem" id="917974237">
 						<reference key="NSMenu" ref="249264890"/>
 						<string key="NSTitle">Open Octopus Beta...</string>
 						<string key="NSKeyEquiv"/>
@@ -81,7 +82,7 @@
 						<reference key="NSOnImage" ref="837203395"/>
 						<reference key="NSMixedImage" ref="993199194"/>
 					</object>
-					<object class="NSMenuItem" id="589298119">
+					<object class="NSMenuItem" id="75916091">
 						<reference key="NSMenu" ref="249264890"/>
 						<bool key="NSIsDisabled">YES</bool>
 						<bool key="NSIsSeparator">YES</bool>
@@ -94,7 +95,8 @@
 					<object class="NSMenuItem" id="846934746">
 						<reference key="NSMenu" ref="249264890"/>
 						<string key="NSTitle">Check for Updates...</string>
-						<string key="NSKeyEquiv"/>
+						<string key="NSKeyEquiv">u</string>
+						<int key="NSKeyEquivModMask">1048576</int>
 						<int key="NSMnemonicLoc">2147483647</int>
 						<reference key="NSOnImage" ref="837203395"/>
 						<reference key="NSMixedImage" ref="993199194"/>
@@ -117,10 +119,20 @@
 						<reference key="NSOnImage" ref="837203395"/>
 						<reference key="NSMixedImage" ref="993199194"/>
 					</object>
+					<object class="NSMenuItem" id="176198080">
+						<reference key="NSMenu" ref="249264890"/>
+						<string key="NSTitle">Restart</string>
+						<string key="NSKeyEquiv">r</string>
+						<int key="NSKeyEquivModMask">1048576</int>
+						<int key="NSMnemonicLoc">2147483647</int>
+						<reference key="NSOnImage" ref="837203395"/>
+						<reference key="NSMixedImage" ref="993199194"/>
+					</object>
 					<object class="NSMenuItem" id="892827420">
 						<reference key="NSMenu" ref="249264890"/>
-						<string key="NSTitle">Quit Octopus Connector</string>
-						<string key="NSKeyEquiv"/>
+						<string key="NSTitle">Quit</string>
+						<string key="NSKeyEquiv">q</string>
+						<int key="NSKeyEquivModMask">1048576</int>
 						<int key="NSMnemonicLoc">2147483647</int>
 						<reference key="NSOnImage" ref="837203395"/>
 						<reference key="NSMixedImage" ref="993199194"/>
@@ -185,9 +197,17 @@
 					<object class="IBActionConnection" key="connection">
 						<string key="label">openWebsite:</string>
 						<reference key="source" ref="976324537"/>
-						<reference key="destination" ref="818017051"/>
+						<reference key="destination" ref="917974237"/>
 					</object>
 					<int key="connectionID">813</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">restart:</string>
+						<reference key="source" ref="976324537"/>
+						<reference key="destination" ref="176198080"/>
+					</object>
+					<int key="connectionID">815</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
@@ -245,8 +265,9 @@
 							<reference ref="846934746"/>
 							<reference ref="892827420"/>
 							<reference ref="751519246"/>
-							<reference ref="589298119"/>
-							<reference ref="818017051"/>
+							<reference ref="75916091"/>
+							<reference ref="917974237"/>
+							<reference ref="176198080"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -292,12 +313,17 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">587</int>
-						<reference key="object" ref="589298119"/>
+						<reference key="object" ref="75916091"/>
 						<reference key="parent" ref="249264890"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">812</int>
-						<reference key="object" ref="818017051"/>
+						<reference key="object" ref="917974237"/>
+						<reference key="parent" ref="249264890"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">814</int>
+						<reference key="object" ref="176198080"/>
 						<reference key="parent" ref="249264890"/>
 					</object>
 				</array>
@@ -319,12 +345,13 @@
 				<string key="585.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="587.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="812.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<string key="814.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 			</dictionary>
 			<dictionary class="NSMutableDictionary" key="unlocalizedProperties"/>
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">813</int>
+			<int key="maxID">815</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -335,6 +362,7 @@
 						<string key="openAboutWindow:">id</string>
 						<string key="openPreferences:">id</string>
 						<string key="openWebsite:">id</string>
+						<string key="restart:">id</string>
 						<string key="toggleConsole:">id</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="actionInfosByName">
@@ -348,6 +376,10 @@
 						</object>
 						<object class="IBActionInfo" key="openWebsite:">
 							<string key="name">openWebsite:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="restart:">
+							<string key="name">restart:</string>
 							<string key="candidateClassName">id</string>
 						</object>
 						<object class="IBActionInfo" key="toggleConsole:">
