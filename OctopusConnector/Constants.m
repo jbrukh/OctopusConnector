@@ -13,6 +13,7 @@
 NSString *const OCServerBinary                              = @"octopus";
 NSString *const OCDemoDataFile                              = @"6cdc3b4a-2de7-04e0-7211-c6ae23117f1e";
 NSString *const OCOctopusWebsite                            = @"http://www.octopusmetrics.com";
+NSString *const OCOctopusContactUs                          = @"https://octopusmetrics.com/pages/contact_us";
 NSString *const OCAppName                                   = @"Octopus Connector";
 
 /* Device Names */

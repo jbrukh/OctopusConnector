@@ -30,6 +30,7 @@
 - (void)setStatusItemDown;
 - (IBAction)openPreferences:(id)sender;
 - (IBAction)openWebsite:(id)sender;
+- (IBAction)openContactUs:(id)sender;
 - (IBAction)toggleConsole:(id)sender;
 - (IBAction)openAboutWindow:(id)sender;
 - (IBAction)restart:(id)sender;

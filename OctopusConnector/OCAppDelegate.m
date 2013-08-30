@@ -114,6 +114,11 @@
     [[NSWorkspace sharedWorkspace] openURL: [NSURL URLWithString:OCOctopusWebsite]];
 }
 
+- (IBAction)openContactUs:(id)sender {
+    [[NSWorkspace sharedWorkspace] openURL: [NSURL URLWithString:OCOctopusContactUs]];
+}
+
+
 - (IBAction)toggleConsole:(id)sender {
     [NSApp activateIgnoringOtherApps:YES];
     [consoleController.window makeKeyWindow];
