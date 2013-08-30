@@ -16,13 +16,13 @@
 		C9651CB517CD9C110064F1AC /* icon_big.png in Resources */ = {isa = PBXBuildFile; fileRef = C9651CB417CD9C110064F1AC /* icon_big.png */; };
 		C9651CBA17CDA4D70064F1AC /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9651CB917CDA4D70064F1AC /* Sparkle.framework */; };
 		C9651CBC17CDA52A0064F1AC /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C9651CB917CDA4D70064F1AC /* Sparkle.framework */; };
-		C9651CBE17CDA5A90064F1AC /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = C9651CBD17CDA5A90064F1AC /* dsa_pub.pem */; };
 		C9651CC217CDA7430064F1AC /* OCAboutWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9651CC017CDA7430064F1AC /* OCAboutWindowController.m */; };
 		C9651CC317CDA7430064F1AC /* OCAboutWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9651CC117CDA7430064F1AC /* OCAboutWindow.xib */; };
 		C9651CD117CF0E4F0064F1AC /* octopus in Resources */ = {isa = PBXBuildFile; fileRef = C9651CD017CF0E4F0064F1AC /* octopus */; };
 		C9651CD517CF0F960064F1AC /* alert_5-20110809115913-00019.png in Resources */ = {isa = PBXBuildFile; fileRef = C9651CD417CF0F960064F1AC /* alert_5-20110809115913-00019.png */; };
 		C9651CD917CF0FCE0064F1AC /* OCDiagnosticsWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9651CD717CF0FCE0064F1AC /* OCDiagnosticsWindowController.m */; };
 		C9651CDA17CF0FCE0064F1AC /* OCDiagnosticsWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9651CD817CF0FCE0064F1AC /* OCDiagnosticsWindow.xib */; };
+		C9651CE617D055C10064F1AC /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = C9651CE517D055C10064F1AC /* dsa_pub.pem */; };
 		C96CDA9817CC4CCB00772628 /* OCConsoleWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = C96CDA9617CC4CCB00772628 /* OCConsoleWindowController.m */; };
 		C96CDA9917CC4CCB00772628 /* OCConsoleWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = C96CDA9717CC4CCB00772628 /* OCConsoleWindow.xib */; };
 		C9E772BB17CA909300E94EBC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9E772BA17CA909300E94EBC /* Cocoa.framework */; };
@@ -66,7 +66,6 @@
 		C9526B5C17CB3CCF00C854F3 /* OCProcessController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCProcessController.m; sourceTree = "<group>"; };
 		C9651CB417CD9C110064F1AC /* icon_big.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_big.png; sourceTree = "<group>"; };
 		C9651CB917CDA4D70064F1AC /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
-		C9651CBD17CDA5A90064F1AC /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
 		C9651CBF17CDA7430064F1AC /* OCAboutWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCAboutWindowController.h; sourceTree = "<group>"; };
 		C9651CC017CDA7430064F1AC /* OCAboutWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCAboutWindowController.m; sourceTree = "<group>"; };
 		C9651CC117CDA7430064F1AC /* OCAboutWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OCAboutWindow.xib; sourceTree = "<group>"; };
@@ -75,6 +74,7 @@
 		C9651CD617CF0FCE0064F1AC /* OCDiagnosticsWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCDiagnosticsWindowController.h; sourceTree = "<group>"; };
 		C9651CD717CF0FCE0064F1AC /* OCDiagnosticsWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCDiagnosticsWindowController.m; sourceTree = "<group>"; };
 		C9651CD817CF0FCE0064F1AC /* OCDiagnosticsWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OCDiagnosticsWindow.xib; sourceTree = "<group>"; };
+		C9651CE517D055C10064F1AC /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
 		C96CDA9517CC4CCB00772628 /* OCConsoleWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCConsoleWindowController.h; sourceTree = "<group>"; };
 		C96CDA9617CC4CCB00772628 /* OCConsoleWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCConsoleWindowController.m; sourceTree = "<group>"; };
 		C96CDA9717CC4CCB00772628 /* OCConsoleWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OCConsoleWindow.xib; sourceTree = "<group>"; };
@@ -143,14 +143,6 @@
 			name = Windows;
 			sourceTree = "<group>";
 		};
-		C9651CB617CDA3480064F1AC /* Keys */ = {
-			isa = PBXGroup;
-			children = (
-				C9651CBD17CDA5A90064F1AC /* dsa_pub.pem */,
-			);
-			name = Keys;
-			sourceTree = "<group>";
-		};
 		C9E772AE17CA909300E94EBC = {
 			isa = PBXGroup;
 			children = (
@@ -210,7 +202,7 @@
 		C9E772C117CA909300E94EBC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				C9651CB617CDA3480064F1AC /* Keys */,
+				C9651CE517D055C10064F1AC /* dsa_pub.pem */,
 				C9E772F917CA9D7100E94EBC /* Binaries */,
 				C9E772F817CA9D5D00E94EBC /* Images */,
 				C9E772C217CA909300E94EBC /* OctopusConnector-Info.plist */,
@@ -323,11 +315,11 @@
 				C9526B5117CAAE8D00C854F3 /* MASPreferencesWindow.xib in Resources */,
 				C96CDA9917CC4CCB00772628 /* OCConsoleWindow.xib in Resources */,
 				C9651CB517CD9C110064F1AC /* icon_big.png in Resources */,
-				C9651CBE17CDA5A90064F1AC /* dsa_pub.pem in Resources */,
 				C9651CC317CDA7430064F1AC /* OCAboutWindow.xib in Resources */,
 				C9651CD117CF0E4F0064F1AC /* octopus in Resources */,
 				C9651CD517CF0F960064F1AC /* alert_5-20110809115913-00019.png in Resources */,
 				C9651CDA17CF0FCE0064F1AC /* OCDiagnosticsWindow.xib in Resources */,
+				C9651CE617D055C10064F1AC /* dsa_pub.pem in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

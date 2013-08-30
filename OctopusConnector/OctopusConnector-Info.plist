@@ -5,11 +5,11 @@
 	<key>SUPublicDSAKeyFile</key>
 	<string>dsa_pub.pem</string>
 	<key>SUFeedURL</key>
-	<string>https://s3.amazonaws.com/erl-connector-downloads/updates.rss</string>
+	<string>file:///Users/jbrukh/Desktop/Connectors/updates.rss</string>
 	<key>CFBundleShortVersionString</key>
-	<string>2.1.1</string>
+	<string>2.2</string>
 	<key>CFBundleVersion</key>
-	<string>2.1.1</string>
+	<string>2.2</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
