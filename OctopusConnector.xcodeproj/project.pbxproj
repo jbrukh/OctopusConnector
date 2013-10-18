@@ -28,6 +28,10 @@
 		C98B8C7C1810D61E0087D0AC /* icon_down.png in Resources */ = {isa = PBXBuildFile; fileRef = C98B8C7A1810D61E0087D0AC /* icon_down.png */; };
 		C98B8C7D1810D61E0087D0AC /* icon_up.png in Resources */ = {isa = PBXBuildFile; fileRef = C98B8C7B1810D61E0087D0AC /* icon_up.png */; };
 		C98B8C7F1810D6510087D0AC /* octopus.icns in Resources */ = {isa = PBXBuildFile; fileRef = C98B8C7E1810D6510087D0AC /* octopus.icns */; };
+		C9DEC41E1810DA50008F531F /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = C9DEC4181810DA50008F531F /* .gitignore */; };
+		C9DEC41F1810DA50008F531F /* MASPreferencesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9DEC41A1810DA50008F531F /* MASPreferencesWindow.xib */; };
+		C9DEC4201810DA50008F531F /* MASPreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9DEC41C1810DA50008F531F /* MASPreferencesWindowController.m */; };
+		C9DEC4211810DA50008F531F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C9DEC41D1810DA50008F531F /* README.md */; };
 		C9E772BB17CA909300E94EBC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9E772BA17CA909300E94EBC /* Cocoa.framework */; };
 		C9E772C517CA909300E94EBC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9E772C317CA909300E94EBC /* InfoPlist.strings */; };
 		C9E772C717CA909300E94EBC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E772C617CA909300E94EBC /* main.m */; };
@@ -81,6 +85,12 @@
 		C98B8C7A1810D61E0087D0AC /* icon_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_down.png; sourceTree = "<group>"; };
 		C98B8C7B1810D61E0087D0AC /* icon_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_up.png; sourceTree = "<group>"; };
 		C98B8C7E1810D6510087D0AC /* octopus.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = octopus.icns; sourceTree = "<group>"; };
+		C9DEC4181810DA50008F531F /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		C9DEC4191810DA50008F531F /* MASPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASPreferencesViewController.h; sourceTree = "<group>"; };
+		C9DEC41A1810DA50008F531F /* MASPreferencesWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MASPreferencesWindow.xib; sourceTree = "<group>"; };
+		C9DEC41B1810DA50008F531F /* MASPreferencesWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASPreferencesWindowController.h; sourceTree = "<group>"; };
+		C9DEC41C1810DA50008F531F /* MASPreferencesWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASPreferencesWindowController.m; sourceTree = "<group>"; };
+		C9DEC41D1810DA50008F531F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		C9E772B717CA909300E94EBC /* OctopusConnector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OctopusConnector.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9E772BA17CA909300E94EBC /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		C9E772BD17CA909300E94EBC /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -143,6 +153,19 @@
 			name = Windows;
 			sourceTree = "<group>";
 		};
+		C9DEC4171810DA50008F531F /* MASPreferences */ = {
+			isa = PBXGroup;
+			children = (
+				C9DEC4181810DA50008F531F /* .gitignore */,
+				C9DEC4191810DA50008F531F /* MASPreferencesViewController.h */,
+				C9DEC41A1810DA50008F531F /* MASPreferencesWindow.xib */,
+				C9DEC41B1810DA50008F531F /* MASPreferencesWindowController.h */,
+				C9DEC41C1810DA50008F531F /* MASPreferencesWindowController.m */,
+				C9DEC41D1810DA50008F531F /* README.md */,
+			);
+			path = MASPreferences;
+			sourceTree = "<group>";
+		};
 		C9E772AE17CA909300E94EBC = {
 			isa = PBXGroup;
 			children = (
@@ -183,6 +206,7 @@
 		C9E772C017CA909300E94EBC /* OctopusConnector */ = {
 			isa = PBXGroup;
 			children = (
+				C9DEC4171810DA50008F531F /* MASPreferences */,
 				C9526B6017CC3CF100C854F3 /* Windows */,
 				C9E772E517CA97F800E94EBC /* Preferences */,
 				C9651CB917CDA4D70064F1AC /* Sparkle.framework */,
@@ -320,6 +344,9 @@
 				C98B8C7C1810D61E0087D0AC /* icon_down.png in Resources */,
 				C98B8C7D1810D61E0087D0AC /* icon_up.png in Resources */,
 				C98B8C7F1810D6510087D0AC /* octopus.icns in Resources */,
+				C9DEC41E1810DA50008F531F /* .gitignore in Resources */,
+				C9DEC41F1810DA50008F531F /* MASPreferencesWindow.xib in Resources */,
+				C9DEC4211810DA50008F531F /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +367,7 @@
 				C96CDA9817CC4CCB00772628 /* OCConsoleWindowController.m in Sources */,
 				C9651CC217CDA7430064F1AC /* OCAboutWindowController.m in Sources */,
 				C9651CD917CF0FCE0064F1AC /* OCDiagnosticsWindowController.m in Sources */,
+				C9DEC4201810DA50008F531F /* MASPreferencesWindowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
