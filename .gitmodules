@@ -1,0 +1,3 @@
+[submodule "OctopusConnector/MASPreferences"]
+	path = OctopusConnector/MASPreferences
+	url = https://github.com/jbrukh/MASPreferences
